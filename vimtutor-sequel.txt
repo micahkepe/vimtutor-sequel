@@ -1,0 +1,594 @@
+==============================================================================
+=  W e l c o m e  t o  t h e  V I M  T u t o r  S e q u e l  -  Version 1.0  =
+==============================================================================
+
+     Vimtutor Sequel is designed to continue your Vim education from 
+     where the original vimtutor left off. It assumes you are familiar 
+     with the basics of Vim and will cover more advanced topics and commands.
+
+     The approximate time required to complete the sequel is 30-60 minutes, 
+     depending on how much time you spend experimenting.
+
+     ATTENTION:
+     The commands in the lessons will modify the text.  Make a copy of this
+     file to practice on (if you started "vimtutor-sequel" this is already 
+     a copy).
+
+     It is important to remember that this tutor is set up to teach by
+     use.  That means that you need to execute the commands to learn them
+     properly.  If you only read the text, you will forget the commands!
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      ### TABLE OF CONTENTS ###
+
+      ** To skip to a specific lesson, type: **
+         /Lesson [number]
+
+      Lesson 8: SPLITTING SCREENS 
+        > 8.1: Creating Splits  
+        > 8.2: Resizing Splits
+      
+      Lesson 9: SPELLCHECK
+
+      LESSON 10: INDENTING, COMMENTING, AND CHANGING CASE
+        > 10.1: Indenting
+        > 10.2: Commenting
+        > 10.3: Changing Case
+
+      Lesson 11: ADVANCED SEARCH AND REPLACE
+
+      Lesson 12: MACROS
+
+      Lesson 13: VIM SCRIPTING
+
+      Lesson 14: VIM PLUGINS
+
+      Lesson 15: VIM SESSIONS AND REGISTERS
+        > 15.1: Vim Sessions
+        > 15.2: Vim REGISTERS
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 			Lesson 8.1: CREATING SPLITS
+
+    Vim allows you to work on multiple files or different parts of the 
+    same file simultaneously by splitting the screen. This feature greatly 
+    enhances productivity when working on complex projects.
+
+    ** To split the screen, use the following commands: **
+      :sp - split horizontally and open the same file in split screen
+
+      :vs - split vertically and open the same file in split screen
+      
+    ** To open a new file in a split, use: **
+      :sp [filename]  - split horizontally and open [filename]
+
+      :vsp [filename] - split vertically and open [filename]
+
+  1. Press :sp to create a horizontal split of this file.
+  
+  2. Use CTRL-W j to move to the new split below.
+  
+  3. Type :q to close the split and return to the original window.
+  
+  4. Now use :vsp to create a vertical split.
+  
+  5. Press CTRL-W l to move to the new split on the right.
+  
+  6. Again, use :q to close this split.
+
+  NOTE: CTRL-W followed by h, j, k, or l moves between splits.
+
+  7. Open a new file in a split by typing :sp hogwarts.txt
+  
+  8. Type i to enter insert mode and write the following text:
+     "You're a wizard, Harry!" - Hagrid
+  
+  9. Save the file with :w and close it with :q
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      Lesson 8.2: RESIZING SPLITS
+
+    Once you've created splits, you might want to resize them to better 
+    fit your needs.
+
+    ** To resize splits, use the following commands: **
+         CTRL-W +  - increase height of current split
+         CTRL-W -  - decrease height of current split
+         CTRL-W >  - increase width of current split
+         CTRL-W <  - decrease width of current split
+         CTRL-W =  - make all splits equal size
+
+  1. Create a horizontal split with :sp
+  
+  2. Press CTRL-W + several times to increase its height.
+  
+  3. Now press CTRL-W - to decrease its height.
+  
+  4. Create a vertical split with :vsp
+  
+  5. Use CTRL-W > to increase its width, and CTRL-W < to decrease it.
+  
+  6. Finally, press CTRL-W = to equalize all splits.
+  
+  CHALLENGE: Create a layout with three splits:
+              - One large split on the left
+              - Two smaller splits stacked on the right 
+              * Hint: you'll need to use :vsp once and :sp once, 
+                      then resize the splits accordingly.
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			Lesson 8 SUMMARY
+
+  1. :sp and :vsp split the screen horizontally and vertically.
+
+  2. CTRL-W h/j/k/l navigate between splits.
+
+  3. :q closes the current split.
+  
+  4. You can open new or existing files in splits.
+
+  5. CTRL-W +/- changes the height of horizontal splits.
+
+  6. CTRL-W >/< changes the width of vertical splits.
+
+  7. CTRL-W = equalizes all splits.
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			Lesson 9: SPELLCHECK
+
+    Vim's built-in spellchecker can be a powerful tool for writing and 
+    editing text.
+
+    ** To enable spellcheck, first run this command: **
+         :setlocal spell spelllang=en_us - Enable spellcheck (US English)
+
+    You should now see misspelled words underlined in red.
+    
+    ** To use spellcheck, use the following commands: **
+         ]s  - Move to the next misspelled word
+         [s  - Move to the previous misspelled word
+         z=  - Suggest corrections for the word under the cursor
+         zg  - Add the word under the cursor to the spell file
+         zw  - Mark the word as incorrect
+
+  1. Enable spellcheck by typing :setlocal spell spelllang=en_us 
+
+  2. Move through the following text using ]s and [s:
+
+--->  Ths is an exampel of a sentance with som mispeled words.
+      It was the beast of tims, it was the wurst of tims.
+
+  3. Place your cursor on a misspelled word above and press z= to see 
+     suggestions and choose a correction by entering its number.
+
+  4. Try adding a correctly spelled but unrecognized word to the dictionary:
+     Place your cursor on "Vim" in the marked sentence below and press zg
+
+--->  I love Vim becuse Vim is powerfull. Vim users enjoy Vim.
+
+  5. Mark a correctly spelled word as incorrect:
+     Place your cursor on "the" below and press zw before adding it back to 
+     the dictionary with zg.
+
+--->  The quick brown fox jumps over the lazy dog.
+
+  6. Finally, disable spellcheck with :set nospell
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			Lesson 9 SUMMARY
+
+  1. :setlocal spell spelllang=en_us enables spellcheck.
+
+  2. ]s and [s navigate through misspelled words.
+
+  3. z= suggests corrections, zg adds words, zw marks words as incorrect.
+
+  4. :set nospell disables spellcheck.
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      Lesson 10.1 Indenting
+
+   ** To indent, comment, or change the case of multiple lines, use the 
+   following commands. **
+      > - Indent the selected lines to the right
+      < - Indent the selected lines to the left
+      #> - Indent the selected lines by a certain number of levels
+      = - Auto-indent the selected lines (tries to guess the correct indent)
+
+  To indent multiple lines at once, follow these steps:
+
+  1. Place your cursor on the first line of the Meditations quote below.
+
+  2. Press V} to select the paragraph.
+
+  3. Press > to indent the selected lines.
+
+“Never let the future disturb you. You will meet it,
+if you have to, with the same weapons of reason which 
+today arm you against the present.”
+
+  4. To indent by a certain number of levels, use #> where # is the number.  
+     Try indenting the following paragraph by three levels:
+
+"The first rule of Fight Club is: 
+You do not talk about Fight Club. 
+The second rule of Fight Club is: 
+You do not talk about Fight Club."
+
+  5. Re-select the last visual selection with gv and unindent the paragraph.
+  
+  CHALLENGE: Indent the following code properly using the = command:
+  
+  int fibonacci(int n) {
+  if (n <= 1) 
+  return n;
+  return fibonacci(n-1) + fibonacci(n-2);
+  }
+
+
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      Lesson 10.2 Commenting
+
+    ** For commenting/uncommenting a single line, use the following 
+       commands: **
+        I# to comment out the line.
+        ^x to uncomment the line.
+
+
+    ** For multiple lines, use the following commands: **
+        :norm I# to comment out the selected lines.
+        :norm ^x to uncomment the selected lines.
+
+  1. Place your cursor on the first line of the Python code below.
+
+  2. Press V} to select the paragraph.
+
+  3. Type :norm I# to comment out the selected lines.
+
+  4. Now uncomment the paragraph by reselecting the block 
+     and typing :norm ^x.
+
+
+def greet(name):
+    print(f"Hello, {name}!")
+    print("Welcome to the world of Python.")
+
+
+  5. Re-select the last visual selection with gv and comment it out again.
+
+  6. To comment out a single line, use I# in normal mode:
+
+print("Hello world!")
+
+  7. To uncomment a single line, use ^x in normal mode.
+
+  CHALLENGE: Comment out every other line in the following quote:
+  
+  You don't even think to call me Godfather.
+  Instead, you come into my house on the day 
+  my daughter is to be married, and you uh 
+  ask me to do murder, for money.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      Lesson 10.3 Changing Case
+
+    ** To change the case of text, use the following commands: **
+        guw - Convert to lowercase (word)
+        gUw - Convert to uppercase (word)
+        g~w - Toggle case (word)
+        gu} - Convert to lowercase (paragraph)
+        gU} - Convert to uppercase (paragraph)
+
+    1. Place your cursor at the start of each name and use gUw to
+        capitalize it:
+
+        harry potter
+        hermione granger
+        ron weasley
+    
+    2. Now use gu} to convert this entire paragraph to lowercase:
+
+       HOGWART SCHOOL OF WITCHCRAFT AND WIZARDRY
+       HEADMASTER: ALBUS DUMBLEDORE
+       (ORDER OF MERLIN, FIRST CLASS, GRAND SORC., CHF. WARLOCK,
+       SUPREME MUGWUMP, INTERNATIONAL CONFED. OF WIZARDS)
+    
+    3. Use g~w to toggle the case of each word in this spell:
+
+        wingardium leviosa
+
+    CHALLENGE: Using a combination of the case-changing commands, transform the 
+             following text so that each house name is in uppercase, but the 
+             rest of the text is in lowercase:
+
+    "Not Slytherin, eh?" said the small voice. "Are you sure? You could be great, 
+    you know, it's all here in your head, and Slytherin will help you on the way 
+    to greatness, no doubt about that - no? Well, if you're sure - better be 
+    GRYFFINDOR!"
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			Lesson 11: ADVANCED SEARCH AND REPLACE
+
+    Vim's search capabilities go beyond basic find operations.
+
+    ** Advanced search commands: **
+         *   - Search forward for the word under the cursor
+         #   - Search backward for the word under the cursor
+         g*  - Search forward for the partial word under the cursor
+         g#  - Search backward for the partial word under the cursor
+
+    ** For search and replace, use: **
+         :%s/old/new/g     - Replace all occurrences of 'old' with 'new' 
+         :%s/old/new/gc    - Replace all occurrences with confirmation
+
+  1. Place your cursor on "vim" and press * to search forward for it.
+     vim editor vim vim editor vim
+
+  2. Now use # to search backward.
+
+  3. Place your cursor on "ed" and use g* to search for partial matches.
+
+  4. Replace "old" with "new" in the following text:
+     :%s/old/new/g
+     The old dog learned old tricks from an old book.
+
+  5. Now try with confirmation:
+     :%s/vim/emacs/gc
+     I love vim because vim is powerful. Vim users enjoy vim.
+
+  CHALLENGE: Use advanced search and replace to change all instances of 
+             "lion" to "penguin" and "Africa" to "Antarctica" in the 
+             following paragraph. Use confirmation to decide which 
+             instances to change:
+    
+                My favorite animal is the lion. The lion 
+                lives mostly in Africa. If you visit Africa, 
+                you might see a lion. 
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			Lesson 12: MACROS
+
+    Macros allow you to record a sequence of commands and play them back.
+
+    ** To use macros: **
+         qa  - Start recording a macro into register 'a'
+         q   - Stop recording
+         @a  - Play back the macro stored in register 'a'
+         @@  - Repeat the last played macro
+
+  1. Place your cursor at the start of the first line below.
+     Type qa to start recording, then perform these actions:
+
+         - Change "TODO" to "DONE" using cw
+         - Move to the next line using j
+         - Type q to stop recording.
+
+     TODO: First task
+     TODO: Second task
+     TODO: Third task
+
+  2. Move back to the first line and type @a to play the macro.
+
+  3. Type @@ to repeat the macro for the third line.
+
+  CHALLENGE: Create a macro that will format the following ingredient list. 
+             Each line should be capitalized and end with a period. 
+             Example: "Russet potatoes: 3" becomes "Russer Potatoes: 3."
+
+        red onions: 2
+        butter stick: 4
+        yellow squash: 5
+        english cucumber: 1
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        Lesson 13: VIM SCRIPTING
+
+    Vim has its own scripting language that allows you to create
+    some functions and commands.
+
+    ** Basic Vim script syntax: **
+        let variablename = value    " Assign a value to a variable
+        echo "message"              " Print a message
+        function! FunctionName()    " Define a function
+        endfunction                 " End function definition
+        call FunctionName()         " Call a function
+
+    1. Let's create a simple function. Type the following into your Vim buffer:
+
+function! Lumos()
+  echo "Lumos Maxima! The tip of your wand lights up."
+endfunction
+
+  2. Now, let's call our function. In normal mode, type:
+     :call Lumos()
+
+   
+  3. Let's create a more complex function that uses a parameter:
+
+function! CastSpell(spell)
+  if a:spell == "Lumos"
+    echo "The tip of your wand lights up."
+  elseif a:spell == "Nox"
+    echo "The light at the tip of your wand goes out."
+  else
+    echo "You wave your wand, but nothing happens."
+  endif
+endfunction
+
+    4. Now let's call our function with different spells:
+       :call CastSpell("Lumos")
+       :call CastSpell("Nox")
+       :call CastSpell("Expelliarmus")
+
+    5. We can also create custom commands. Type the following:
+
+command! Lumos call CastSpell("Lumos")
+command! Nox call CastSpell("Nox")
+
+    Now you can use :Lumos and :Nox as commands!
+
+    6. Let's create a mapping. Type the following:
+
+  nnoremap <leader>l :call CastSpell("Lumos")<CR>
+
+    Now, pressing <leader>l in normal mode will cast Lumos!
+
+    CHALLENGE: Create a function called "SortingHat" that takes a name as a 
+               parameter and randomly assigns it to one of the four Hogwarts 
+               houses. Then create a command called :SortMe that calls this 
+               function with your name.
+
+    Hint: You can use the random() function in Vim to generate a random number.
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        Lesson 14: VIM PLUGINS
+
+
+    Plugins extend Vim's functionality. Let's explore how to use them.
+
+    NOTE: For this lesson, we'll assume you're using vim-plug as your plugin 
+    manager. If you haven't installed it yet, you can do so by following the 
+    instructions at https://github.com/junegunn/vim-plug
+
+    ** Basic vim-plug commands: **
+        :PlugInstall    " Install plugins
+        :PlugUpdate     " Update plugins
+        :PlugClean      " Remove unused plugins
+        :PlugStatus     " Check the status of plugins
+
+  1. To add a plugin, you need to modify your .vimrc file. Let's add the 
+     'NERDTree' plugin, which provides a file system explorer. Add this line 
+     to your .vimrc:
+
+call plug#begin()
+Plug 'preservim/nerdtree'
+call plug#end()
+
+  2. Save your .vimrc and restart Vim. Then run :PlugInstall to install the plugin.
+
+  3. Once installed, you can open NERDTree with :NERDTree
+
+  4. Let's add another useful plugin, 'vim-airline', which enhances the status bar:
+
+call plug#begin()
+Plug 'preservim/nerdtree'
+Plug 'vim-airline/vim-airline'
+call plug#end()
+
+  5. Save, restart Vim, and run :PlugInstall again.
+
+  6. You should now see a more informative status bar at the bottom of your Vim window.
+
+  CHALLENGE: Research and add a Vim plugin that adds Git integration to Vim. 
+             Install it and try out its basic functionality.
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        Lesson 15.1: VIM SESSIONS
+
+    Vim sessions allow you to save your current work environment and restore it later.
+
+    ** Session commands: **
+        :mksession filename.vim   " Create a session file
+        :source filename.vim      " Load a session
+        :mksession! filename.vim  " Update an existing session
+
+  1. Open a few files in split windows and create some modifications.
+
+  2. Now, let's save this session. Type:
+     :mksession test_session.vim
+
+  3. Quit Vim and restart it.
+
+  4. To restore your session, type:
+     :source test_session.vim
+
+  5. Make some more changes, then update your session:
+     :mksession! test_session.vim
+
+  CHALLENGE: Create a complex window layout with at least three files open. 
+             Save it as a session, quit Vim, then restore the session.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        Lesson 15.2: VIM REGISTERS
+
+    Vim registers are like multiple clipboards that can store text and commands.
+
+    ** Register commands: **
+        "ay    " Yank into register a
+        "ap    " Paste from register a
+        :reg   " View the contents of all registers
+
+  1. Yank the following line into register w by placing your cursor on it and typing "wy$:
+     Wingardium Leviosa
+
+  2. Move your cursor to an empty line and paste from register w by typing "wp
+
+  3. Copy the following line into register x:
+     Expelliarmus
+
+  4. View the contents of your registers by typing :reg
+
+  5. You can even use registers with macros. Record a macro into register m:
+     qmcwHogwarts<Esc>jq
+
+  6. Now apply this macro to the following lines using @m:
+     Beauxbatons
+     Durmstrang
+     Ilvermorny
+
+  CHALLENGE: Create a macro that swaps two words and store it in a register. 
+             Apply this macro to swap the words in the following phrases:
+             - Potter Harry
+             - Weasley Ron
+             - Granger Hermione
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        Lesson 15 SUMMARY
+
+  1. Vim sessions allow you to save and restore your working environment.
+
+  2. Use :mksession to create a session and :source to restore it.
+
+  4. Use " followed by a letter to specify a register for yanking or pasting.
+
+  5. The :reg command shows the contents of all registers.
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  This concludes the Vimtutor Sequel. If you found this tutor helpful, 
+  consider starring the repository on GitHub:
+
+      ★  https://github.com/micahkepe/vimtutor-sequel
+  
+  For contributing, reporting issues, or requesting new lessons, refer to 
+  the CONTRIBUTING.md file in the repository.
+
+  For further learning, the following resources are recommended:
+
+  - Vim's built-in help system: :help
+  - Vim's official documentation: vimdoc.sourceforge.net
+
+  Websites:
+  - Vimtricks.com
+  - Vimgenius.com
+  
+  Books:
+  - Practical Vim - Drew Neil
+  - Learning the Vi and Vim Editors - Arnold Robbins
+
+  Remember, becoming a Vim wizard takes practice, so keep exploring 
+  and experimenting with these features and more!
+
+  Written by Micah Kepe, 2024.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
