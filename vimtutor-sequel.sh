@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Define the location of the vimtutor-sequel.txt file and vimrc
-TUTORIAL_FILE="/usr/local/share/vimtutor-sequel/vimtutor-sequel.txt"
-VIMRC_FILE="/usr/local/share/vimtutor-sequel/vimtutor-sequel.vimrc"
+TUTORIAL_FILE="$(brew --prefix)/share/vimtutor-sequel/vimtutor-sequel.txt"
+VIMRC_FILE="$(brew --prefix)/share/vimtutor-sequel/vimtutor-sequel.vimrc"
 TEMP_FILE="/tmp/vimtutor-sequel.txt"
 
 # Check if the tutorial file exists
@@ -22,4 +22,3 @@ vim -u "$VIMRC_FILE" "$TEMP_FILE"
 
 # Clean up the temporary file after Vim exits
 rm -f "$TEMP_FILE"
-
