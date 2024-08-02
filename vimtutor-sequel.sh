@@ -1,8 +1,10 @@
 #!/bin/bash
 
-# Define the location of the vimtutor-sequel.txt file and vimrc
-TUTORIAL_FILE="$(brew --prefix)/share/vimtutor-sequel/vimtutor-sequel.txt"
-VIMRC_FILE="$(brew --prefix)/share/vimtutor-sequel/vimtutor-sequel.vimrc"
+# Define the location of the vimtutor-sequel.txt file and vimrc 
+# Where brew installs the files using `pkgshare` command
+BREW_PREFIX=$(brew --prefix)
+TUTORIAL_FILE="$BREW_PREFIX/share/vimtutor-sequel/vimtutor-sequel.txt"
+VIMRC_FILE="$BREW_PREFIX/share/vimtutor-sequel/vimtutor-sequel.vimrc"
 TEMP_FILE="/tmp/vimtutor-sequel.txt"
 
 # Check if the tutorial file exists
