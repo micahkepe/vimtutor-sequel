@@ -2,6 +2,8 @@
 
 Vimtutor Sequel provides advanced Vim tutor lessons to help users deepen their understanding of Vim.
 
+![Teaser image of the tutorial](images/teaser.png)
+
 ## Features
 
 - Advanced Vim commands and techniques
