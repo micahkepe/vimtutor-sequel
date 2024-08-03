@@ -302,14 +302,14 @@ print("Hello world!")
 
         wingardium leviosa
 
-    CHALLENGE: Using a combination of the case-changing commands, transform the 
-             following text so that each house name is in uppercase, but the 
-             rest of the text is in lowercase:
+    CHALLENGE: Using a combination of the case-changing commands, transform 
+             the following text so that each house name is in uppercase, but 
+             the rest of the text is in lowercase:
 
-    "Not Slytherin, eh?" said the small voice. "Are you sure? You could be great, 
-    you know, it's all here in your head, and Slytherin will help you on the way 
-    to greatness, no doubt about that - no? Well, if you're sure - better be 
-    GRYFFINDOR!"
+    "Not Slytherin, eh?" said the small voice. "Are you sure? You could be 
+    great, you know, it's all here in your head, and Slytherin will help you 
+    on the way to greatness, no doubt about that - no? Well, if you're sure 
+    - better be GRYFFINDOR!"
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -432,7 +432,8 @@ print("Hello world!")
         endfunction                 " End function definition
         call FunctionName()         " Call a function
 
-    1. Let's create a simple function. Type the following into your Vim buffer:
+    1. Let's create a simple function. Type the following into your 
+       Vim buffer:
 
 function! Lumos()
   echo "Lumos Maxima! The tip of your wand lights up."
@@ -472,12 +473,14 @@ command! Nox call CastSpell("Nox")
 
     Now, pressing <leader>l in normal mode will cast Lumos!
 
-    CHALLENGE: Create a function called "SortingHat" that takes a name as a 
-               parameter and randomly assigns it to one of the four Hogwarts 
-               houses. Then create a command called :SortMe that calls this 
-               function with your name.
+    CHALLENGE: Create a function called "SortingHat" that takes a 
+               name as a parameter and randomly assigns it to one 
+               of the four Hogwarts houses. Then create a command 
+               called :SortMe that calls this function with your 
+               name.
 
-    Hint: You can use the random() function in Vim to generate a random number.
+    Hint: You can use the random() function in Vim to generate a random 
+          number.
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -513,18 +516,20 @@ command! Nox call CastSpell("Nox")
         :PlugStatus     " Check the status of plugins
 
   1. To add a plugin, you need to modify your .vimrc file. Let's add the 
-     'NERDTree' plugin, which provides a file system explorer. Add this line 
-     to your .vimrc:
+     'NERDTree' plugin, which provides a file system explorer. Add this 
+     line to your .vimrc:
 
 call plug#begin()
 Plug 'preservim/nerdtree'
 call plug#end()
 
-  2. Save your .vimrc and restart Vim. Then run :PlugInstall to install the plugin.
+  2. Save your .vimrc and restart Vim. Then run :PlugInstall to install 
+     the plugin.
 
   3. Once installed, you can open NERDTree with :NERDTree
 
-  4. Let's add another useful plugin, 'vim-airline', which enhances the status bar:
+  4. Let's add another useful plugin, 'vim-airline', which enhances the 
+     status bar:
 
 call plug#begin()
 Plug 'preservim/nerdtree'
@@ -533,10 +538,11 @@ call plug#end()
 
   5. Save, restart Vim, and run :PlugInstall again.
 
-  6. You should now see a more informative status bar at the bottom of your Vim window.
+  6. You should now see a more informative status bar at the bottom of 
+     your Vim window.
 
-  CHALLENGE: Research and add a Vim plugin that adds Git integration to Vim. 
-             Install it and try out its basic functionality.
+  CHALLENGE: Research and add a Vim plugin that adds Git integration to 
+             Vim. Install it and try out its basic functionality.
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -556,7 +562,8 @@ call plug#end()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         Lesson 15.1: VIM SESSIONS
 
-    Vim sessions allow you to save your current work environment and restore it later.
+    Vim sessions allow you to save your current work environment and restore 
+    it later.
 
     ** Session commands: **
         :mksession filename.vim   " Create a session file
@@ -582,15 +589,16 @@ call plug#end()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         Lesson 15.2: VIM REGISTERS
 
-    Vim registers are like multiple clipboards that can store text and commands.
+    Vim registers are like multiple clipboards that can store text and 
+    commands.
 
     ** Register commands: **
         "ay    " Yank into register a
         "ap    " Paste from register a
         :reg   " View the contents of all registers
 
-  1. Yank the following line into register w by placing your cursor on it and typing "wy$:
-     Wingardium Leviosa
+  1. Yank the following line into register w by placing your cursor on it and 
+      typing "wy$: Wingardium Leviosa
 
   2. Move your cursor to an empty line and paste from register w by typing "wp
 
