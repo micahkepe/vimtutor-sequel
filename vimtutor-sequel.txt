@@ -338,19 +338,20 @@ print("Hello world!")
          :%s/old/new/g     - Replace all occurrences of 'old' with 'new' 
          :%s/old/new/gc    - Replace all occurrences with confirmation
 
-  1. Place your cursor on "vim" and press * to search forward for it.
-     vim editor vim vim editor vim
+  1. Place your cursor on "vim" and press * to search forward for it:
+
+          vim editor vim vim editor vim
 
   2. Now use # to search backward.
 
   3. Place your cursor on "ed" and use g* to search for partial matches.
 
-  4. Replace "old" with "new" in the following text:
-     :%s/old/new/g
+  4. Replace "old" with "new" in the following text with :%s/old/new/g
+
      The old dog learned old tricks from an old book.
 
-  5. Now try with confirmation:
-     :%s/vim/emacs/gc
+  5. Now try with confirmation using :%s/vim/emacs/gc
+
      I love vim because vim is powerful. Vim users enjoy vim.
 
   CHALLENGE: Use advanced search and replace to change all instances of 
@@ -597,7 +598,7 @@ call plug#end()
   2. Now, let's save this session. Type:
      :mksession test_session.vim
 
-  3. Quit Vim and restart it.
+  3. Quit Vim and restart this tutor with `vimtutor-sequel`.
 
   4. To restore your session, type:
      :source test_session.vim
@@ -620,20 +621,28 @@ call plug#end()
         "ap    " Paste from register a
         :reg   " View the contents of all registers
 
-  1. Yank the following line into register w by placing your cursor on it and 
-      typing "wy$: Wingardium Leviosa
+  1. Yank the first line into register w by placing your cursor on it and 
+      typing "wy$:
+      
+      Wingardium Leviosa
 
-  2. Move your cursor to an empty line and paste from register w by typing "wp
+  2. Now move your cursor to the right of the arrow below and paste from 
+     register w by typing "wp
+
+--->
 
   3. Copy the following line into register x:
      Expelliarmus
 
   4. View the contents of your registers by typing :reg
 
-  5. You can even use registers with macros. Record a macro into register m:
+  5. You can even use registers with macros. Record the following macro 
+     into register m:
+
      qmcwHogwarts<Esc>jq
 
   6. Now apply this macro to the following lines using @m:
+
      Beauxbatons
      Durmstrang
      Ilvermorny
