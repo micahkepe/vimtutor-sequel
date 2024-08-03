@@ -12,7 +12,9 @@ Vimtutor Sequel provides advanced Vim tutor lessons to help users deepen their u
 
 ## Installation
 
-To install `vimtutor-sequel`, you need Homebrew. If you don't have Homebrew installed, you can install it using the following command:
+The easiest way to use `vimtutor-sequel` is to install it using Homebrew. However, you can also run the tutorial manually by cloning the repository (see [Running Vimtutor Without Homebrew](#running-vimtutor-without-homebrew)).
+
+If you don't have Homebrew installed, you can install it using the following command:
 
 ```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -47,27 +49,30 @@ brew upgrade vimtutor-sequel
 If you are on Windows or Linux, you can still run the tutorial by cloning the repository and running the script manually:
 
 1. **Clone the repository**:
+
 ```sh
 git clone https://github.com/micahkepe/vimtutor-sequel.git
 ```
 
 2. **Navigate to the repository**:
+
 ```sh
 cd vimtutor-sequel
 ```
 
 3. **Make a Copy of the Tutorial**:
+
 ```sh
 cp vimtutor-sequel.txt vimtutor-sequel-copy.txt
 ```
 
 4. **Run Vim with the Custom Configuration**:
+
 ```sh
 vim -u vimtutor-sequel.vimrc vimtutor-sequel-copy.txt
 ```
 
 This method allows you to easily access and run the Vimtutor Sequel lessons without the need for additional installation steps.
-
 
 ## License
 
