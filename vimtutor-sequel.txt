@@ -586,6 +586,7 @@ call plug#end()
   CHALLENGE: Create a complex window layout with at least three files open. 
              Save it as a session, quit Vim, then restore the session.
 
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         Lesson 15.2: VIM REGISTERS
 

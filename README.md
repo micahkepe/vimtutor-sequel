@@ -33,6 +33,16 @@ To run the `vimtutor-sequel` script, simply type:
 vimtutor-sequel
 ```
 
+## Updating the tutorial
+
+To update the tutorial to the latest version, run the following commands:
+
+```sh
+brew update
+brew upgrade vimtutor-sequel
+```
+
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
