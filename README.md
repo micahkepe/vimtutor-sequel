@@ -63,7 +63,7 @@ cp vimtutor-sequel.txt vimtutor-sequel-copy.txt
 
 4. **Run Vim with the Custom Configuration**:
 ```sh
-vim -u vimtutor-sequel.vim vimtutor-sequel-copy.txt
+vim -u vimtutor-sequel.vimrc vimtutor-sequel-copy.txt
 ```
 
 This method allows you to easily access and run the Vimtutor Sequel lessons without the need for additional installation steps.
