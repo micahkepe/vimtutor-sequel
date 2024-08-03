@@ -391,17 +391,17 @@ print("Hello world!")
          - Move to the next line using j
          - Type q to stop recording.
 
-     TODO: First task
-     TODO: Second task
-     TODO: Third task
+    TODO: First task
+    TODO: Second task
+    TODO: Third task
 
-  2. Move back to the first line and type @a to play the macro.
+  2. Move back to the second line and type @a to play the macro.
 
   3. Type @@ to repeat the macro for the third line.
 
   CHALLENGE: Create a macro that will format the following ingredient list. 
              Each line should be capitalized and end with a period. 
-             Example: "Russet potatoes: 3" becomes "Russer Potatoes: 3."
+             Example: "Russet potatoes: 3" becomes "Russet Potatoes: 3."
 
         red onions: 2
         butter stick: 4
@@ -423,7 +423,8 @@ print("Hello world!")
         Lesson 13: VIM SCRIPTING
 
     Vim has its own scripting language that allows you to create
-    some functions and commands.
+    some functions and commands. This lesson will guide you through 
+    creating, saving, and using Vim scripts.
 
     ** Basic Vim script syntax: **
         let variablename = value    " Assign a value to a variable
@@ -432,18 +433,31 @@ print("Hello world!")
         endfunction                 " End function definition
         call FunctionName()         " Call a function
 
-    1. Let's create a simple function. Type the following into your 
-       Vim buffer:
+    1. Let's create a simple function. First, open a new buffer by typing 
+       `:new` followed by `Enter`. Then, enter insert mode and copy the 
+       following function:
 
 function! Lumos()
   echo "Lumos Maxima! The tip of your wand lights up."
 endfunction
 
-  2. Now, let's call our function. In normal mode, type:
+      
+      After doing this, save the buffer as a script file by exiting 
+      insert mode with `Esc` and then typing `:w myscript.vim` followed 
+      by `Enter`.
+
+  2. Source the script file to load the function with the following:
+        :source myscript.vim 
+
+  3. Now, let's call our function. In normal mode, type:
      :call Lumos()
+
+    You should see "Lumos Maxima! The tip of your wand lights up."
 
    
   3. Let's create a more complex function that uses a parameter:
+      Open `myscript.vim` if it's not already open (`:e myscript.vim`)
+      Insert the following function:
 
 function! CastSpell(spell)
   if a:spell == "Lumos"
@@ -455,19 +469,27 @@ function! CastSpell(spell)
   endif
 endfunction
 
-    4. Now let's call our function with different spells:
+
+    4. Once again, write and source the script file by using `:w` to
+       write the changes and `:source myscript.vim` to load the functions.
+
+    5. Now let's call our function with different spells:
        :call CastSpell("Lumos")
        :call CastSpell("Nox")
        :call CastSpell("Expelliarmus")
 
-    5. We can also create custom commands. Type the following:
+    6. We can also create custom commands. Insert the following in 
+       `myscript.vim`:
 
 command! Lumos call CastSpell("Lumos")
 command! Nox call CastSpell("Nox")
 
-    Now you can use :Lumos and :Nox as commands!
 
-    6. Let's create a mapping. Type the following:
+    Then write and source the updated commands.
+
+    Now you can use `:Lumos` and `:Nox` as commands!
+
+    6. Let's create a mapping. Type the following in `myscript.vim`:
 
   nnoremap <leader>l :call CastSpell("Lumos")<CR>
 
