@@ -1,5 +1,5 @@
 ==============================================================================
-=  W e l c o m e  t o  t h e  V I M  T u t o r  S e q u e l  -  Version 1.0  =
+=  W e l c o m e  t o  t h e  V I M  T u t o r  S e q u e l  -  Version 1.2  =
 ==============================================================================
 
      Vimtutor Sequel is designed to continue your Vim education from 
@@ -18,11 +18,12 @@
      use.  That means that you need to execute the commands to learn them
      properly.  If you only read the text, you will forget the commands!
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      ### TABLE OF CONTENTS ###
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                         ### TABLE OF CONTENTS ###
 
-      ** To skip to a specific lesson, type: **
-         /Lesson [number]
+          ** To skip to a specific lesson, type: /Lesson [number] **
+                      
+      LESSONS:
 
       Lesson 8: SPLITTING SCREENS 
         > 8.1: Creating Splits  
@@ -118,7 +119,7 @@
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-			Lesson 8 SUMMARY
+                         Lesson 8 SUMMARY
 
   1. :sp and :vsp split the screen horizontally and vertically.
 
@@ -178,7 +179,7 @@
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-			Lesson 9 SUMMARY
+                         Lesson 9 SUMMARY
 
   1. :setlocal spell spelllang=en_us enables spellcheck.
 
@@ -312,6 +313,17 @@ print("Hello world!")
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                         Lesson 10 SUMMARY
+
+  1. >, <, and = handle indentation.
+
+  2. I, ^x, :norm I#, and :norm ^x can be used to toggle comments for 
+      one or multiple lines.
+
+  3. gu, gU, and g~ change the case of text.
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 			Lesson 11: ADVANCED SEARCH AND REPLACE
 
     Vim's search capabilities go beyond basic find operations.
@@ -352,6 +364,16 @@ print("Hello world!")
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                         Lesson 11 SUMMARY
+
+  1. * and # search for whole words, g* and g# for partial words.
+
+  2. :%s/old/new/g replaces all occurrences in the file.
+
+  3. Adding 'c' to the end prompts for confirmation on each replacement.
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 			Lesson 12: MACROS
 
     Macros allow you to record a sequence of commands and play them back.
@@ -385,6 +407,16 @@ print("Hello world!")
         butter stick: 4
         yellow squash: 5
         english cucumber: 1
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                         Lesson 12 SUMMARY
+
+  1. qa starts recording a macro into register 'a'.
+
+  2. q stops the recording.
+
+  3. @a plays back the macro, and @@ repeats the last macro.
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -449,6 +481,22 @@ command! Nox call CastSpell("Nox")
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                         Lesson 13 SUMMARY
+
+    1. `let` assigns a value to a variable.
+
+    2. `echo` prints a message.
+
+    3. `function!` and `endfunction` define a function.
+
+    4. `call` invokes a function.
+
+    5. Custom commands can be created using `command!`.
+
+    6. Mappings can be created with `nnoremap`.
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         Lesson 14: VIM PLUGINS
 
 
@@ -489,6 +537,20 @@ call plug#end()
 
   CHALLENGE: Research and add a Vim plugin that adds Git integration to Vim. 
              Install it and try out its basic functionality.
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                         Lesson 14 SUMMARY
+
+    1. `:PlugInstall` installs plugins with `vim-plug`
+
+    2. `:PlugUpdate` updates plugins.
+
+    3. `:PlugClean` removes unused plugins.
+    
+    4. `:PlugStatus` checks the status of plugins.
+    
+    5. Plugins can be added to your `.vimrc` using `Plug 'plugin/repository'`.
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -553,7 +615,7 @@ call plug#end()
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        Lesson 15 SUMMARY
+                         Lesson 15 SUMMARY
 
   1. Vim sessions allow you to save and restore your working environment.
 

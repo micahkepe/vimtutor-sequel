@@ -1,4 +1,4 @@
-" Make Vim configuration try to replicate original `vimtutor`
+" Vim configuration to match original vimtutor appearance
 set nocompatible
 filetype off
 syntax off
@@ -7,5 +7,11 @@ set nowrap
 set nonumber
 set norelativenumber
 set background=dark
-highlight Normal ctermfg=grey ctermbg=black
 
+" Highlighting settings to adjust font weight and colors
+highlight Normal ctermfg=grey ctermbg=black
+highlight Bold term=bold cterm=bold ctermfg=grey ctermbg=black
+
+" Ensure these settings are loaded
+set t_Co=256
+set termguicolors
