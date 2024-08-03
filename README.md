@@ -20,12 +20,35 @@ If you don't have Homebrew installed, you can install it using the following com
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-Then, tap the repository and install vimtutor-sequel:
+### For New Users
 
-```sh
-brew tap micahkepe/vimtutor-sequel
-brew install vimtutor-sequel
-```
+To install `vimtutor-sequel` for the first time using Homebrew:
+
+1. **Tap the repository**:
+
+   ```sh
+   brew tap micahkepe/vimtutor-sequel
+   ```
+
+2. **Install `vimtutor-sequel`**:
+   ```sh
+   brew install vimtutor-sequel
+   ```
+
+### For Existing Users
+
+If you have already installed `vimtutor-sequel` and want to upgrade to the latest version:
+
+1. **Update Homebrew**:
+
+   ```sh
+   brew update
+   ```
+
+2. **Upgrade `vimtutor-sequel`**:
+   ```sh
+   brew upgrade vimtutor-sequel
+   ```
 
 ## Usage
 
@@ -33,15 +56,6 @@ To run the `vimtutor-sequel` script, simply type:
 
 ```sh
 vimtutor-sequel
-```
-
-## Updating the Tutorial
-
-To update the tutorial to the latest version, run the following commands:
-
-```sh
-brew update
-brew upgrade vimtutor-sequel
 ```
 
 ## Running Vimtutor Without Homebrew
