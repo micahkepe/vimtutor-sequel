@@ -33,7 +33,7 @@ To run the `vimtutor-sequel` script, simply type:
 vimtutor-sequel
 ```
 
-## Updating the tutorial
+## Updating the Tutorial
 
 To update the tutorial to the latest version, run the following commands:
 
@@ -41,6 +41,32 @@ To update the tutorial to the latest version, run the following commands:
 brew update
 brew upgrade vimtutor-sequel
 ```
+
+## Running Vimtutor Without Homebrew
+
+If you are on Windows or Linux, you can still run the tutorial by cloning the repository and running the script manually:
+
+1. **Clone the repository**:
+```sh
+git clone https://github.com/micahkepe/vimtutor-sequel.git
+```
+
+2. **Navigate to the repository**:
+```sh
+cd vimtutor-sequel
+```
+
+3. **Make a Copy of the Tutorial**:
+```sh
+cp vimtutor-sequel.txt vimtutor-sequel-copy.txt
+```
+
+4. **Run Vim with the Custom Configuration**:
+```sh
+vim -u vimtutor-sequel.vim vimtutor-sequel-copy.txt
+```
+
+This method allows you to easily access and run the Vimtutor Sequel lessons without the need for additional installation steps.
 
 
 ## License
