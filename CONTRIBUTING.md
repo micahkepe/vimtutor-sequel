@@ -7,7 +7,7 @@ Thank you for considering contributing to `vimtutor-sequel`! We welcome contribu
 1. **Fork the Repository**: Click the "Fork" button at the top of this repository to create your own fork.
 2. **Clone the Repository**: Clone your fork to your local machine using:
    ```sh
-   git clone https://github.com/micahkepe/vimtutor-sequel.git
+   git clone https://github.com/your-username/vimtutor-sequel.git
    ```
 3. **Create a Branch**: Create a new branch for your contribution:
 
