@@ -14,11 +14,11 @@ Special thanks to the following contributors for their help with this release:
 ### Added
 
 - Change log to track project updates.
-- Add version flags to the script for easier version tracking. (-v, --version)
+- Add version flags to the script for easier version tracking. (`-v`, `--version`)
 
 ### Changed
 
-- N/A
+- Updated README.md with version check and upgrade instructions.
 
 ### Fixed
 

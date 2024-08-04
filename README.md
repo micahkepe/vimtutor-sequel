@@ -39,14 +39,18 @@ To install `vimtutor-sequel` for the first time using Homebrew:
 
 If you have already installed `vimtutor-sequel` and want to upgrade to the latest version:
 
-1. **Update Homebrew**:
+1. **Check your current version** (available from version 1.2.3 and later):
+
+   ```sh
+   vimtutor-sequel --version
+   ```
+
+   If you are not on the latest version, you can upgrade by continuing with the following steps.
+
+2. **Upgrade `vimtutor-sequel`**:
 
    ```sh
    brew update
-   ```
-
-2. **Upgrade `vimtutor-sequel`**:
-   ```sh
    brew upgrade vimtutor-sequel
    ```
 
