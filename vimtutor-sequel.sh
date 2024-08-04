@@ -1,6 +1,8 @@
 #!/bin/bash
 
-# Define the location of the vimtutor-sequel.txt file and vimrc 
+VERSION="1.2.3"  # TODO: Update this with each new release
+
+# Define the location of the vimtutor-sequel.txt file and vimrc
 # Where brew installs the files using `pkgshare` command
 BREW_PREFIX=$(brew --prefix)
 TUTORIAL_FILE="$BREW_PREFIX/share/vimtutor-sequel/vimtutor-sequel.txt"
@@ -11,6 +13,12 @@ TEMP_FILE="/tmp/vimtutor-sequel.txt"
 if [ ! -f "$TUTORIAL_FILE" ]; then
   echo "Vimtutor Sequel file not found!"
   exit 1
+fi
+
+# Handle version flag
+if [[ "$1" == "--version" || "$1" == "-v" ]]; then
+  echo "Vimtutor Sequel version $VERSION"
+  exit 0
 fi
 
 # Ensure the temporary file is deleted if it already exists
