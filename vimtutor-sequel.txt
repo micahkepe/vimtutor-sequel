@@ -2,16 +2,16 @@
 =  W e l c o m e  t o  t h e  V I M  T u t o r  S e q u e l  -  Version 1.2  =
 ==============================================================================
 
-     Vimtutor Sequel is designed to continue your Vim education from 
-     where the original vimtutor left off. It assumes you are familiar 
+     Vimtutor Sequel is designed to continue your Vim education from
+     where the original vimtutor left off. It assumes you are familiar
      with the basics of Vim and will cover more advanced topics and commands.
 
-     The approximate time required to complete the sequel is 30-60 minutes, 
+     The approximate time required to complete the sequel is 30-60 minutes,
      depending on how much time you spend experimenting.
 
      ATTENTION:
      The commands in the lessons will modify the text.  Make a copy of this
-     file to practice on (if you started "vimtutor-sequel" this is already 
+     file to practice on (if you started "vimtutor-sequel" this is already
      a copy).
 
      It is important to remember that this tutor is set up to teach by
@@ -25,8 +25,8 @@
 
       LESSONS:
 
-      Lesson 8: SPLITTING SCREENS 
-        > 8.1: Creating Splits  
+      Lesson 8: SPLITTING SCREENS
+        > 8.1: Creating Splits
         > 8.2: Resizing Splits
 
       Lesson 9: SPELLCHECK
@@ -51,8 +51,8 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  			Lesson 8.1: CREATING SPLITS
 
-    Vim allows you to work on multiple files or different parts of the 
-    same file simultaneously by splitting the screen. This feature greatly 
+    Vim allows you to work on multiple files or different parts of the
+    same file simultaneously by splitting the screen. This feature greatly
     enhances productivity when working on complex projects.
 
     ** To split the screen, use the following commands: **
@@ -89,7 +89,7 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       Lesson 8.2: RESIZING SPLITS
 
-    Once you've created splits, you might want to resize them to better 
+    Once you've created splits, you might want to resize them to better
     fit your needs.
 
     ** To resize splits, use the following commands: **
@@ -113,8 +113,8 @@
 
   CHALLENGE: Create a layout with three splits:
               - One large split on the left
-              - Two smaller splits stacked on the right 
-              * Hint: you'll need to use :vsp once and :sp once, 
+              - Two smaller splits stacked on the right
+              * Hint: you'll need to use :vsp once and :sp once,
                       then resize the splits accordingly.
 
 
@@ -139,7 +139,7 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 			Lesson 9: SPELLCHECK
 
-    Vim's built-in spellchecker can be a powerful tool for writing and 
+    Vim's built-in spellchecker can be a powerful tool for writing and
     editing text.
 
     ** To enable spellcheck, first run this command: **
@@ -154,14 +154,14 @@
          zg  - Add the word under the cursor to the spell file
          zw  - Mark the word as incorrect
 
-  1. Enable spellcheck by typing :setlocal spell spelllang=en_us 
+  1. Enable spellcheck by typing :setlocal spell spelllang=en_us
 
   2. Move through the following text using ]s and [s:
 
 --->  Ths is an exampel of a sentance with som mispeled words.
       It was the beast of tims, it was the wurst of tims.
 
-  3. Place your cursor on a misspelled word above and press z= to see 
+  3. Place your cursor on a misspelled word above and press z= to see
      suggestions and choose a correction by entering its number.
 
   4. Try adding a correctly spelled but unrecognized word to the dictionary:
@@ -170,7 +170,7 @@
 --->  I love Vim becuse Vim is powerfull. Vim users enjoy Vim.
 
   5. Mark a correctly spelled word as incorrect:
-     Place your cursor on "the" below and press zw before adding it back to 
+     Place your cursor on "the" below and press zw before adding it back to
      the dictionary with zg.
 
 --->  The quick brown fox jumps over the lazy dog.
@@ -193,7 +193,7 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       Lesson 10.1 Indenting
 
-   ** To indent, comment, or change the case of multiple lines, use the 
+   ** To indent, comment, or change the case of multiple lines, use the
    following commands. **
       > - Indent the selected lines to the right
       < - Indent the selected lines to the left
@@ -209,15 +209,15 @@
   3. Press > to indent the selected lines.
 
 “Never let the future disturb you. You will meet it,
-if you have to, with the same weapons of reason which 
+if you have to, with the same weapons of reason which
 today arm you against the present.”
 
-  4. To indent by a certain number of levels, use #> where # is the number.  
+  4. To indent by a certain number of levels, use #> where # is the number.
      Try indenting the following paragraph by three levels:
 
-"The first rule of Fight Club is: 
-You do not talk about Fight Club. 
-The second rule of Fight Club is: 
+"The first rule of Fight Club is:
+You do not talk about Fight Club.
+The second rule of Fight Club is:
 You do not talk about Fight Club."
 
   5. Re-select the last visual selection with gv and unindent the paragraph.
@@ -225,7 +225,7 @@ You do not talk about Fight Club."
   CHALLENGE: Indent the following code properly using the = command:
 
   int fibonacci(int n) {
-  if (n <= 1) 
+  if (n <= 1)
   return n;
   return fibonacci(n-1) + fibonacci(n-2);
   }
@@ -234,7 +234,7 @@ You do not talk about Fight Club."
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       Lesson 10.2 Commenting
 
-    ** For commenting/uncommenting a single line, use the following 
+    ** For commenting/uncommenting a single line, use the following
        commands: **
         I# to comment out the line.
         ^x to uncomment the line.
@@ -250,7 +250,7 @@ You do not talk about Fight Club."
 
   3. Type :norm I# to comment out the selected lines.
 
-  4. Now uncomment the paragraph by reselecting the block 
+  4. Now uncomment the paragraph by reselecting the block
      and typing :norm ^x.
 
 
@@ -270,8 +270,8 @@ print("Hello world!")
   CHALLENGE: Comment out every other line in the following quote:
 
   You don't even think to call me Godfather.
-  Instead, you come into my house on the day 
-  my daughter is to be married, and you uh 
+  Instead, you come into my house on the day
+  my daughter is to be married, and you uh
   ask me to do murder, for money.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -302,13 +302,13 @@ print("Hello world!")
 
         wingardium leviosa
 
-    CHALLENGE: Using a combination of the case-changing commands, transform 
-             the following text so that each house name is in uppercase, but 
+    CHALLENGE: Using a combination of the case-changing commands, transform
+             the following text so that each house name is in uppercase, but
              the rest of the text is in lowercase:
 
-    "Not Slytherin, eh?" said the small voice. "Are you sure? You could be 
-    great, you know, it's all here in your head, and Slytherin will help you 
-    on the way to greatness, no doubt about that - no? Well, if you're sure 
+    "Not Slytherin, eh?" said the small voice. "Are you sure? You could be
+    great, you know, it's all here in your head, and Slytherin will help you
+    on the way to greatness, no doubt about that - no? Well, if you're sure
     - better be GRYFFINDOR!"
 
 
@@ -317,7 +317,7 @@ print("Hello world!")
 
   1. >, <, and = handle indentation.
 
-  2. I, ^x, :norm I#, and :norm ^x can be used to toggle comments for 
+  2. I, ^x, :norm I#, and :norm ^x can be used to toggle comments for
       one or multiple lines.
 
   3. gu, gU, and g~ change the case of text.
@@ -335,7 +335,7 @@ print("Hello world!")
          g#  - Search backward for the partial word under the cursor
 
     ** For search and replace, use: **
-         :%s/old/new/g     - Replace all occurrences of 'old' with 'new' 
+         :%s/old/new/g     - Replace all occurrences of 'old' with 'new'
          :%s/old/new/gc    - Replace all occurrences with confirmation
 
   1. Place your cursor on "vim" and press * to search forward for it:
@@ -354,14 +354,14 @@ print("Hello world!")
 
      I love vim because vim is powerful. Vim users enjoy vim.
 
-  CHALLENGE: Use advanced search and replace to change all instances of 
-             "lion" to "penguin" and "Africa" to "Antarctica" in the 
-             following paragraph. Use confirmation to decide which 
+  CHALLENGE: Use advanced search and replace to change all instances of
+             "lion" to "penguin" and "Africa" to "Antarctica" in the
+             following paragraph. Use confirmation to decide which
              instances to change:
 
-                My favorite animal is the lion. The lion 
-                lives mostly in Africa. If you visit Africa, 
-                you might see a lion. 
+                My favorite animal is the lion. The lion
+                lives mostly in Africa. If you visit Africa,
+                you might see a lion.
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -400,8 +400,8 @@ print("Hello world!")
 
   3. Type @@ to repeat the macro for the third line.
 
-  CHALLENGE: Create a macro that will format the following ingredient list. 
-             Each line should be capitalized and end with a period. 
+  CHALLENGE: Create a macro that will format the following ingredient list.
+             Each line should be capitalized and end with a period.
              Example: "Russet potatoes: 3" becomes "Russet Potatoes: 3."
 
         red onions: 2
@@ -424,7 +424,7 @@ print("Hello world!")
         Lesson 13: VIM SCRIPTING
 
     Vim has its own scripting language that allows you to create
-    some functions and commands. This lesson will guide you through 
+    some functions and commands. This lesson will guide you through
     creating, saving, and using Vim scripts.
 
     ** Basic Vim script syntax: **
@@ -434,8 +434,8 @@ print("Hello world!")
         endfunction                 " End function definition
         call FunctionName()         " Call a function
 
-    1. Let's create a simple function. First, open a new buffer by typing 
-       `:new` followed by `Enter`. Then, enter insert mode and copy the 
+    1. Let's create a simple function. First, open a new buffer by typing
+       `:new` followed by `Enter`. Then, enter insert mode and copy the
        following function:
 
 function! Lumos()
@@ -443,12 +443,12 @@ function! Lumos()
 endfunction
 
 
-      After doing this, save the buffer as a script file by exiting 
-      insert mode with `Esc` and then typing `:w myscript.vim` followed 
+      After doing this, save the buffer as a script file by exiting
+      insert mode with `Esc` and then typing `:w myscript.vim` followed
       by `Enter`.
 
   2. Source the script file to load the function with the following:
-        :source myscript.vim 
+        :source myscript.vim
 
   3. Now, let's call our function. In normal mode, type:
      :call Lumos()
@@ -479,7 +479,7 @@ endfunction
        :call CastSpell("Nox")
        :call CastSpell("Expelliarmus")
 
-    6. We can also create custom commands. Insert the following in 
+    6. We can also create custom commands. Insert the following in
        `myscript.vim`:
 
 command! Lumos call CastSpell("Lumos")
@@ -496,13 +496,13 @@ command! Nox call CastSpell("Nox")
 
     Now, pressing <leader>l in normal mode will cast Lumos!
 
-    CHALLENGE: Create a function called "SortingHat" that takes a 
-               name as a parameter and randomly assigns it to one 
-               of the four Hogwarts houses. Then create a command 
-               called :SortMe that calls this function with your 
+    CHALLENGE: Create a function called "SortingHat" that takes a
+               name as a parameter and randomly assigns it to one
+               of the four Hogwarts houses. Then create a command
+               called :SortMe that calls this function with your
                name.
 
-    Hint: You can use the random() function in Vim to generate a random 
+    Hint: You can use the random() function in Vim to generate a random
           number.
 
 
@@ -528,8 +528,8 @@ command! Nox call CastSpell("Nox")
 
     Plugins extend Vim's functionality. Let's explore how to use them.
 
-    NOTE: For this lesson, we'll assume you're using vim-plug as your plugin 
-    manager. If you haven't installed it yet, you can do so by following the 
+    NOTE: For this lesson, we'll assume you're using vim-plug as your plugin
+    manager. If you haven't installed it yet, you can do so by following the
     instructions at https://github.com/junegunn/vim-plug
 
     ** Basic vim-plug commands: **
@@ -538,20 +538,20 @@ command! Nox call CastSpell("Nox")
         :PlugClean      " Remove unused plugins
         :PlugStatus     " Check the status of plugins
 
-  1. To add a plugin, you need to modify your .vimrc file. Let's add the 
-     'NERDTree' plugin, which provides a file system explorer. Add this 
+  1. To add a plugin, you need to modify your .vimrc file. Let's add the
+     'NERDTree' plugin, which provides a file system explorer. Add this
      line to your .vimrc:
 
 call plug#begin()
 Plug 'preservim/nerdtree'
 call plug#end()
 
-  2. Save your .vimrc and restart Vim. Then run :PlugInstall to install 
+  2. Save your .vimrc and restart Vim. Then run :PlugInstall to install
      the plugin.
 
   3. Once installed, you can open NERDTree with :NERDTree
 
-  4. Let's add another useful plugin, 'vim-airline', which enhances the 
+  4. Let's add another useful plugin, 'vim-airline', which enhances the
      status bar:
 
 call plug#begin()
@@ -561,10 +561,10 @@ call plug#end()
 
   5. Save, restart Vim, and run :PlugInstall again.
 
-  6. You should now see a more informative status bar at the bottom of 
+  6. You should now see a more informative status bar at the bottom of
      your Vim window.
 
-  CHALLENGE: Research and add a Vim plugin that adds Git integration to 
+  CHALLENGE: Research and add a Vim plugin that adds Git integration to
              Vim. Install it and try out its basic functionality.
 
 
@@ -585,7 +585,7 @@ call plug#end()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         Lesson 15.1: VIM SESSIONS
 
-    Vim sessions allow you to save your current work environment and restore 
+    Vim sessions allow you to save your current work environment and restore
     it later.
 
     ** Session commands: **
@@ -606,14 +606,14 @@ call plug#end()
   5. Make some more changes, then update your session:
      :mksession! test_session.vim
 
-  CHALLENGE: Create a complex window layout with at least three files open. 
+  CHALLENGE: Create a complex window layout with at least three files open.
              Save it as a session, quit Vim, then restore the session.
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         Lesson 15.2: VIM REGISTERS
 
-    Vim registers are like multiple clipboards that can store text and 
+    Vim registers are like multiple clipboards that can store text and
     commands.
 
     ** Register commands: **
@@ -621,12 +621,12 @@ call plug#end()
         "ap    " Paste from register a
         :reg   " View the contents of all registers
 
-  1. Yank the first line into register w by placing your cursor on it and 
+  1. Yank the first line into register w by placing your cursor on it and
       typing "wy$:
 
       Wingardium Leviosa
 
-  2. Now move your cursor to the right of the arrow below and paste from 
+  2. Now move your cursor to the right of the arrow below and paste from
      register w by typing "wp
 
 --->
@@ -636,7 +636,7 @@ call plug#end()
 
   4. View the contents of your registers by typing :reg
 
-  5. You can even use registers with macros. Record the following macro 
+  5. You can even use registers with macros. Record the following macro
      into register m:
 
      qmcwHogwarts<Esc>jq
@@ -647,7 +647,7 @@ call plug#end()
      Durmstrang
      Ilvermorny
 
-  CHALLENGE: Create a macro that swaps two words and store it in a register. 
+  CHALLENGE: Create a macro that swaps two words and store it in a register.
              Apply this macro to swap the words in the following phrases:
              - Potter Harry
              - Weasley Ron
@@ -667,12 +667,12 @@ call plug#end()
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  This concludes the Vimtutor Sequel. If you found this tutor helpful, 
+  This concludes the Vimtutor Sequel. If you found this tutor helpful,
   consider starring the repository on GitHub:
 
       ★  https://github.com/micahkepe/vimtutor-sequel
 
-  For contributing, reporting issues, or requesting new lessons, refer to 
+  For contributing, reporting issues, or requesting new lessons, refer to
   the CONTRIBUTING.md file in the repository.
 
   For further learning, the following resources are recommended:
@@ -688,7 +688,7 @@ call plug#end()
   - Practical Vim - Drew Neil
   - Learning the Vi and Vim Editors - Arnold Robbins
 
-  Remember, becoming a Vim wizard takes practice, so keep exploring 
+  Remember, becoming a Vim wizard takes practice, so keep exploring
   and experimenting with these features and more!
 
   Written by Micah Kepe, 2024.
