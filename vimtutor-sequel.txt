@@ -22,13 +22,13 @@
                          ### TABLE OF CONTENTS ###
 
           ** To skip to a specific lesson, type: /Lesson [number] **
-                      
+
       LESSONS:
 
       Lesson 8: SPLITTING SCREENS 
         > 8.1: Creating Splits  
         > 8.2: Resizing Splits
-      
+
       Lesson 9: SPELLCHECK
 
       LESSON 10: INDENTING, COMMENTING, AND CHANGING CASE
@@ -59,31 +59,31 @@
       :sp - split horizontally and open the same file in split screen
 
       :vs - split vertically and open the same file in split screen
-      
+
     ** To open a new file in a split, use: **
       :sp [filename]  - split horizontally and open [filename]
 
       :vsp [filename] - split vertically and open [filename]
 
   1. Press :sp to create a horizontal split of this file.
-  
+
   2. Use CTRL-W j to move to the new split below.
-  
+
   3. Type :q to close the split and return to the original window.
-  
+
   4. Now use :vsp to create a vertical split.
-  
+
   5. Press CTRL-W l to move to the new split on the right.
-  
+
   6. Again, use :q to close this split.
 
   NOTE: CTRL-W followed by h, j, k, or l moves between splits.
 
   7. Open a new file in a split by typing :sp hogwarts.txt
-  
+
   8. Type i to enter insert mode and write the following text:
      "You're a wizard, Harry!" - Hagrid
-  
+
   9. Save the file with :w and close it with :q
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -100,17 +100,17 @@
          CTRL-W =  - make all splits equal size
 
   1. Create a horizontal split with :sp
-  
+
   2. Press CTRL-W + several times to increase its height.
-  
+
   3. Now press CTRL-W - to decrease its height.
-  
+
   4. Create a vertical split with :vsp
-  
+
   5. Use CTRL-W > to increase its width, and CTRL-W < to decrease it.
-  
+
   6. Finally, press CTRL-W = to equalize all splits.
-  
+
   CHALLENGE: Create a layout with three splits:
               - One large split on the left
               - Two smaller splits stacked on the right 
@@ -126,7 +126,7 @@
   2. CTRL-W h/j/k/l navigate between splits.
 
   3. :q closes the current split.
-  
+
   4. You can open new or existing files in splits.
 
   5. CTRL-W +/- changes the height of horizontal splits.
@@ -146,7 +146,7 @@
          :setlocal spell spelllang=en_us - Enable spellcheck (US English)
 
     You should now see misspelled words underlined in red.
-    
+
     ** To use spellcheck, use the following commands: **
          ]s  - Move to the next misspelled word
          [s  - Move to the previous misspelled word
@@ -221,9 +221,9 @@ The second rule of Fight Club is:
 You do not talk about Fight Club."
 
   5. Re-select the last visual selection with gv and unindent the paragraph.
-  
+
   CHALLENGE: Indent the following code properly using the = command:
-  
+
   int fibonacci(int n) {
   if (n <= 1) 
   return n;
@@ -268,7 +268,7 @@ print("Hello world!")
   7. To uncomment a single line, use ^x in normal mode.
 
   CHALLENGE: Comment out every other line in the following quote:
-  
+
   You don't even think to call me Godfather.
   Instead, you come into my house on the day 
   my daughter is to be married, and you uh 
@@ -290,14 +290,14 @@ print("Hello world!")
         harry potter
         hermione granger
         ron weasley
-    
+
     2. Now use gu} to convert this entire paragraph to lowercase:
 
        HOGWART SCHOOL OF WITCHCRAFT AND WIZARDRY
        HEADMASTER: ALBUS DUMBLEDORE
        (ORDER OF MERLIN, FIRST CLASS, GRAND SORC., CHF. WARLOCK,
        SUPREME MUGWUMP, INTERNATIONAL CONFED. OF WIZARDS)
-    
+
     3. Use g~w to toggle the case of each word in this spell:
 
         wingardium leviosa
@@ -358,7 +358,7 @@ print("Hello world!")
              "lion" to "penguin" and "Africa" to "Antarctica" in the 
              following paragraph. Use confirmation to decide which 
              instances to change:
-    
+
                 My favorite animal is the lion. The lion 
                 lives mostly in Africa. If you visit Africa, 
                 you might see a lion. 
@@ -442,7 +442,7 @@ function! Lumos()
   echo "Lumos Maxima! The tip of your wand lights up."
 endfunction
 
-      
+
       After doing this, save the buffer as a script file by exiting 
       insert mode with `Esc` and then typing `:w myscript.vim` followed 
       by `Enter`.
@@ -455,7 +455,7 @@ endfunction
 
     You should see "Lumos Maxima! The tip of your wand lights up."
 
-   
+
   3. Let's create a more complex function that uses a parameter:
       Open `myscript.vim` if it's not already open (`:e myscript.vim`)
       Insert the following function:
@@ -576,9 +576,9 @@ call plug#end()
     2. `:PlugUpdate` updates plugins.
 
     3. `:PlugClean` removes unused plugins.
-    
+
     4. `:PlugStatus` checks the status of plugins.
-    
+
     5. Plugins can be added to your `.vimrc` using `Plug 'plugin/repository'`.
 
 
@@ -623,7 +623,7 @@ call plug#end()
 
   1. Yank the first line into register w by placing your cursor on it and 
       typing "wy$:
-      
+
       Wingardium Leviosa
 
   2. Now move your cursor to the right of the arrow below and paste from 
@@ -671,7 +671,7 @@ call plug#end()
   consider starring the repository on GitHub:
 
       ★  https://github.com/micahkepe/vimtutor-sequel
-  
+
   For contributing, reporting issues, or requesting new lessons, refer to 
   the CONTRIBUTING.md file in the repository.
 
@@ -683,7 +683,7 @@ call plug#end()
   Websites:
   - Vimtricks.com
   - Vimgenius.com
-  
+
   Books:
   - Practical Vim - Drew Neil
   - Learning the Vi and Vim Editors - Arnold Robbins
