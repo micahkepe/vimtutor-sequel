@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.3] - 2024-08-03
+
 Special thanks to the following contributors for their help with this release:
 
 - [@harrisi](https://github.com/harrisi)
@@ -71,7 +73,8 @@ Special thanks to the following contributors for their help with this release:
 - Initial release of Vimtutor Sequel.
 - Basic advanced Vim topics and initial lessons.
 
-[Unreleased]: https://github.com/micahkepe/vimtutor-sequel/compare/v1.2.2...HEAD
+[Unreleased]: https://github.com/micahkepe/vimtutor-sequel/compare/v1.2.3...HEAD
+[1.2.3]: https://github.com/micahkepe/vimtutor-sequel/compare/v1.2.2...v1.2.3
 [1.2.2]: https://github.com/micahkepe/vimtutor-sequel/compare/v1.2.1...v1.2.2
 [1.2.1]: https://github.com/micahkepe/vimtutor-sequel/compare/v1.2...v1.2.1
 [1.2]: https://github.com/micahkepe/vimtutor-sequel/compare/v1.1...v1.2
