@@ -193,7 +193,7 @@
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                        Lesson 10.1 Indenting
+                        Lesson 10.1 INDENTING
 
      ** To indent, comment, or change the case of multiple lines, use the
         following commands. **
@@ -234,7 +234,7 @@ You do not talk about Fight Club."
 
 
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                        Lesson 10.2 Commenting
+                        Lesson 10.2 COMMENTING
 
      ** For commenting/uncommenting a single line, use the following
         commands: **
@@ -278,7 +278,7 @@ print("Hello world!")
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                        Lesson 10.3 Changing Case
+                        Lesson 10.3 CHANGING CASE
 
      ** To change the case of text, use the following commands: **
          guw - Convert to lowercase (word)
@@ -414,7 +414,7 @@ print("Hello world!")
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                         Lesson 12 SUMMARY
+                        Lesson 12 SUMMARY
 
   1. qa starts recording a macro into register 'a'.
 
@@ -424,7 +424,7 @@ print("Hello world!")
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        Lesson 13: VIM SCRIPTING
+                        Lesson 13: VIM SCRIPTING
 
      Vim has its own scripting language that allows you to create
      some functions and commands. This lesson will guide you through
