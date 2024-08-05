@@ -456,7 +456,7 @@ endfunction
     You should see "Lumos Maxima! The tip of your wand lights up."
 
 
-  3. Let's create a more complex function that uses a parameter:
+  4. Let's create a more complex function that uses a parameter:
       Open `myscript.vim` if it's not already open (`:e myscript.vim`)
       Insert the following function:
 
@@ -471,15 +471,15 @@ function! CastSpell(spell)
 endfunction
 
 
-    4. Once again, write and source the script file by using `:w` to
+    5. Once again, write and source the script file by using `:w` to
        write the changes and `:source myscript.vim` to load the functions.
 
-    5. Now let's call our function with different spells:
+    6. Now let's call our function with different spells:
        :call CastSpell("Lumos")
        :call CastSpell("Nox")
        :call CastSpell("Expelliarmus")
 
-    6. We can also create custom commands. Insert the following in
+    7. We can also create custom commands. Insert the following in
        `myscript.vim`:
 
 command! Lumos call CastSpell("Lumos")
@@ -490,7 +490,7 @@ command! Nox call CastSpell("Nox")
 
     Now you can use `:Lumos` and `:Nox` as commands!
 
-    6. Let's create a mapping. Type the following in `myscript.vim`:
+    8. Let's create a mapping. Type the following in `myscript.vim`:
 
   nnoremap <leader>l :call CastSpell("Lumos")<CR>
 
@@ -661,9 +661,9 @@ call plug#end()
 
   2. Use :mksession to create a session and :source to restore it.
 
-  4. Use " followed by a letter to specify a register for yanking or pasting.
+  3. Use " followed by a letter to specify a register for yanking or pasting.
 
-  5. The :reg command shows the contents of all registers.
+  4. The :reg command shows the contents of all registers.
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
