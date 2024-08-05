@@ -19,51 +19,52 @@
      properly.  If you only read the text, you will forget the commands!
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                         ### TABLE OF CONTENTS ###
+                        ### TABLE OF CONTENTS ###
 
-          ** To skip to a specific lesson, type: /Lesson [number] **
+   ** To skip to a specific lesson, type: /Lesson [number] **
 
-      LESSONS:
+   LESSONS:
 
-      Lesson 8: SPLITTING SCREENS
-        > 8.1: Creating Splits
-        > 8.2: Resizing Splits
+     Lesson 8: SPLITTING SCREENS
+       > 8.1: Creating Splits
+       > 8.2: Resizing Splits
 
-      Lesson 9: SPELLCHECK
+     Lesson 9: SPELLCHECK
 
-      LESSON 10: INDENTING, COMMENTING, AND CHANGING CASE
-        > 10.1: Indenting
-        > 10.2: Commenting
-        > 10.3: Changing Case
+     Lesson 10: INDENTING, COMMENTING, AND CHANGING CASE
+       > 10.1: Indenting
+       > 10.2: Commenting
+       > 10.3: Changing Case
 
-      Lesson 11: ADVANCED SEARCH AND REPLACE
+     Lesson 11: ADVANCED SEARCH AND REPLACE
 
-      Lesson 12: MACROS
+     Lesson 12: MACROS
 
-      Lesson 13: VIM SCRIPTING
+     Lesson 13: VIM SCRIPTING
 
-      Lesson 14: VIM PLUGINS
+     Lesson 14: VIM PLUGINS
 
-      Lesson 15: VIM SESSIONS AND REGISTERS
-        > 15.1: Vim Sessions
-        > 15.2: Vim REGISTERS
+     Lesson 15: VIM SESSIONS AND REGISTERS
+       > 15.1: Vim Sessions
+       > 15.2: Vim Registers
+
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- 			Lesson 8.1: CREATING SPLITS
+                        Lesson 8.1: CREATING SPLITS
 
-    Vim allows you to work on multiple files or different parts of the
-    same file simultaneously by splitting the screen. This feature greatly
-    enhances productivity when working on complex projects.
+     Vim allows you to work on multiple files or different parts of the
+     same file simultaneously by splitting the screen. This feature greatly
+     enhances productivity when working on complex projects.
 
-    ** To split the screen, use the following commands: **
-      :sp - split horizontally and open the same file in split screen
+     ** To split the screen, use the following commands: **
+       :sp - split horizontally and open the same file in split screen
 
-      :vs - split vertically and open the same file in split screen
+       :vs - split vertically and open the same file in split screen
 
-    ** To open a new file in a split, use: **
-      :sp [filename]  - split horizontally and open [filename]
+     ** To open a new file in a split, use: **
+       :sp [filename]  - split horizontally and open [filename]
 
-      :vsp [filename] - split vertically and open [filename]
+       :vsp [filename] - split vertically and open [filename]
 
   1. Press :sp to create a horizontal split of this file.
 
@@ -86,18 +87,19 @@
 
   9. Save the file with :w and close it with :q
 
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      Lesson 8.2: RESIZING SPLITS
+                        Lesson 8.2: RESIZING SPLITS
 
-    Once you've created splits, you might want to resize them to better
-    fit your needs.
+     Once you've created splits, you might want to resize them to better
+     fit your needs.
 
-    ** To resize splits, use the following commands: **
-         CTRL-W +  - increase height of current split
-         CTRL-W -  - decrease height of current split
-         CTRL-W >  - increase width of current split
-         CTRL-W <  - decrease width of current split
-         CTRL-W =  - make all splits equal size
+     ** To resize splits, use the following commands: **
+          CTRL-W +  - increase height of current split
+          CTRL-W -  - decrease height of current split
+          CTRL-W >  - increase width of current split
+          CTRL-W <  - decrease width of current split
+          CTRL-W =  - make all splits equal size
 
   1. Create a horizontal split with :sp
 
@@ -119,7 +121,7 @@
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                         Lesson 8 SUMMARY
+                        Lesson 8 SUMMARY
 
   1. :sp and :vsp split the screen horizontally and vertically.
 
@@ -137,17 +139,17 @@
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-			Lesson 9: SPELLCHECK
+                        Lesson 9: SPELLCHECK
 
-    Vim's built-in spellchecker can be a powerful tool for writing and
-    editing text.
+     Vim's built-in spellchecker can be a powerful tool for writing and
+     editing text.
 
-    ** To enable spellcheck, first run this command: **
-         :setlocal spell spelllang=en_us - Enable spellcheck (US English)
+     ** To enable spellcheck, first run this command: **
+          :setlocal spell spelllang=en_us - Enable spellcheck (US English)
 
-    You should now see misspelled words underlined in red.
+     You should now see misspelled words underlined in red.
 
-    ** To use spellcheck, use the following commands: **
+     ** To use spellcheck, use the following commands: **
          ]s  - Move to the next misspelled word
          [s  - Move to the previous misspelled word
          z=  - Suggest corrections for the word under the cursor
@@ -179,7 +181,7 @@
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                         Lesson 9 SUMMARY
+                        Lesson 9 SUMMARY
 
   1. :setlocal spell spelllang=en_us enables spellcheck.
 
@@ -191,16 +193,16 @@
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      Lesson 10.1 Indenting
+                        Lesson 10.1 INDENTING
 
-   ** To indent, comment, or change the case of multiple lines, use the
-   following commands. **
-      > - Indent the selected lines to the right
-      < - Indent the selected lines to the left
-      #> - Indent the selected lines by a certain number of levels
-      = - Auto-indent the selected lines (tries to guess the correct indent)
+     ** To indent, comment, or change the case of multiple lines, use the
+        following commands. **
+         > - Indent the selected lines to the right
+         < - Indent the selected lines to the left
+         #> - Indent the selected lines by a certain number of levels
+         = - Auto-indent the selected lines (tries to guess the correct indent)
 
-  To indent multiple lines at once, follow these steps:
+     To indent multiple lines at once, follow these steps:
 
   1. Place your cursor on the first line of the Meditations quote below.
 
@@ -232,17 +234,17 @@ You do not talk about Fight Club."
 
 
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      Lesson 10.2 Commenting
+                        Lesson 10.2 COMMENTING
 
-    ** For commenting/uncommenting a single line, use the following
-       commands: **
-        I# to comment out the line.
-        ^x to uncomment the line.
+     ** For commenting/uncommenting a single line, use the following
+        commands: **
+         I# to comment out the line.
+         ^x to uncomment the line.
 
 
-    ** For multiple lines, use the following commands: **
-        :norm I# to comment out the selected lines.
-        :norm ^x to uncomment the selected lines.
+     ** For multiple lines, use the following commands: **
+         :norm I# to comment out the selected lines.
+         :norm ^x to uncomment the selected lines.
 
   1. Place your cursor on the first line of the Python code below.
 
@@ -274,46 +276,47 @@ print("Hello world!")
   my daughter is to be married, and you uh
   ask me to do murder, for money.
 
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      Lesson 10.3 Changing Case
+                        Lesson 10.3 CHANGING CASE
 
-    ** To change the case of text, use the following commands: **
-        guw - Convert to lowercase (word)
-        gUw - Convert to uppercase (word)
-        g~w - Toggle case (word)
-        gu} - Convert to lowercase (paragraph)
-        gU} - Convert to uppercase (paragraph)
+     ** To change the case of text, use the following commands: **
+         guw - Convert to lowercase (word)
+         gUw - Convert to uppercase (word)
+         g~w - Toggle case (word)
+         gu} - Convert to lowercase (paragraph)
+         gU} - Convert to uppercase (paragraph)
 
-    1. Place your cursor at the start of each name and use gUw to
-        capitalize it:
+  1. Place your cursor at the start of each name and use gUw to
+     capitalize it:
 
-        harry potter
-        hermione granger
-        ron weasley
+     harry potter
+     hermione granger
+     ron weasley
 
-    2. Now use gu} to convert this entire paragraph to lowercase:
+  2. Now use gu} to convert this entire paragraph to lowercase:
 
-       HOGWART SCHOOL OF WITCHCRAFT AND WIZARDRY
-       HEADMASTER: ALBUS DUMBLEDORE
-       (ORDER OF MERLIN, FIRST CLASS, GRAND SORC., CHF. WARLOCK,
-       SUPREME MUGWUMP, INTERNATIONAL CONFED. OF WIZARDS)
+     HOGWART SCHOOL OF WITCHCRAFT AND WIZARDRY
+     HEADMASTER: ALBUS DUMBLEDORE
+     (ORDER OF MERLIN, FIRST CLASS, GRAND SORC., CHF. WARLOCK,
+     SUPREME MUGWUMP, INTERNATIONAL CONFED. OF WIZARDS)
 
-    3. Use g~w to toggle the case of each word in this spell:
+  3. Use g~w to toggle the case of each word in this spell:
 
-        wingardium leviosa
+     wingardium leviosa
 
-    CHALLENGE: Using a combination of the case-changing commands, transform
+  CHALLENGE: Using a combination of the case-changing commands, transform
              the following text so that each house name is in uppercase, but
              the rest of the text is in lowercase:
 
-    "Not Slytherin, eh?" said the small voice. "Are you sure? You could be
-    great, you know, it's all here in your head, and Slytherin will help you
-    on the way to greatness, no doubt about that - no? Well, if you're sure
-    - better be GRYFFINDOR!"
+  "Not Slytherin, eh?" said the small voice. "Are you sure? You could be
+  great, you know, it's all here in your head, and Slytherin will help you
+  on the way to greatness, no doubt about that - no? Well, if you're sure
+  - better be GRYFFINDOR!"
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                         Lesson 10 SUMMARY
+                        Lesson 10 SUMMARY
 
   1. >, <, and = handle indentation.
 
@@ -324,23 +327,23 @@ print("Hello world!")
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-			Lesson 11: ADVANCED SEARCH AND REPLACE
+                        Lesson 11: ADVANCED SEARCH AND REPLACE
 
-    Vim's search capabilities go beyond basic find operations.
+     Vim's search capabilities go beyond basic find operations.
 
-    ** Advanced search commands: **
+     ** Advanced search commands: **
          *   - Search forward for the word under the cursor
          #   - Search backward for the word under the cursor
          g*  - Search forward for the partial word under the cursor
          g#  - Search backward for the partial word under the cursor
 
-    ** For search and replace, use: **
+     ** For search and replace, use: **
          :%s/old/new/g     - Replace all occurrences of 'old' with 'new'
          :%s/old/new/gc    - Replace all occurrences with confirmation
 
   1. Place your cursor on "vim" and press * to search forward for it:
 
-          vim editor vim vim editor vim
+     vim editor vim vim editor vim
 
   2. Now use # to search backward.
 
@@ -359,9 +362,9 @@ print("Hello world!")
              following paragraph. Use confirmation to decide which
              instances to change:
 
-                My favorite animal is the lion. The lion
-                lives mostly in Africa. If you visit Africa,
-                you might see a lion.
+  My favorite animal is the lion. The lion
+  lives mostly in Africa. If you visit Africa,
+  you might see a lion.
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -377,13 +380,13 @@ print("Hello world!")
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 			Lesson 12: MACROS
 
-    Macros allow you to record a sequence of commands and play them back.
+     Macros allow you to record a sequence of commands and play them back.
 
-    ** To use macros: **
-         qa  - Start recording a macro into register 'a'
-         q   - Stop recording
-         @a  - Play back the macro stored in register 'a'
-         @@  - Repeat the last played macro
+     ** To use macros: **
+          qa  - Start recording a macro into register 'a'
+          q   - Stop recording
+          @a  - Play back the macro stored in register 'a'
+          @@  - Repeat the last played macro
 
   1. Place your cursor at the start of the first line below.
      Type qa to start recording, then perform these actions:
@@ -392,9 +395,9 @@ print("Hello world!")
          - Move to the next line using j
          - Type q to stop recording.
 
-    TODO: First task
-    TODO: Second task
-    TODO: Third task
+     TODO: First task
+     TODO: Second task
+     TODO: Third task
 
   2. Move back to the second line and type @a to play the macro.
 
@@ -404,14 +407,14 @@ print("Hello world!")
              Each line should be capitalized and end with a period.
              Example: "Russet potatoes: 3" becomes "Russet Potatoes: 3."
 
-        red onions: 2
-        butter stick: 4
-        yellow squash: 5
-        english cucumber: 1
+  red onions: 2
+  butter stick: 4
+  yellow squash: 5
+  english cucumber: 1
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                         Lesson 12 SUMMARY
+                        Lesson 12 SUMMARY
 
   1. qa starts recording a macro into register 'a'.
 
@@ -421,31 +424,30 @@ print("Hello world!")
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        Lesson 13: VIM SCRIPTING
+                        Lesson 13: VIM SCRIPTING
 
-    Vim has its own scripting language that allows you to create
-    some functions and commands. This lesson will guide you through
-    creating, saving, and using Vim scripts.
+     Vim has its own scripting language that allows you to create
+     some functions and commands. This lesson will guide you through
+     creating, saving, and using Vim scripts.
 
-    ** Basic Vim script syntax: **
-        let variablename = value    " Assign a value to a variable
-        echo "message"              " Print a message
-        function! FunctionName()    " Define a function
-        endfunction                 " End function definition
-        call FunctionName()         " Call a function
+     ** Basic Vim script syntax: **
+         let variablename = value    " Assign a value to a variable
+         echo "message"              " Print a message
+         function! FunctionName()    " Define a function
+         endfunction                 " End function definition
+         call FunctionName()         " Call a function
 
-    1. Let's create a simple function. First, open a new buffer by typing
-       `:new` followed by `Enter`. Then, enter insert mode and copy the
-       following function:
+  1. Let's create a simple function. First, open a new buffer by typing
+     `:new` followed by `Enter`. Then, enter insert mode and copy the
+     following function:
 
 function! Lumos()
   echo "Lumos Maxima! The tip of your wand lights up."
 endfunction
 
-
-      After doing this, save the buffer as a script file by exiting
-      insert mode with `Esc` and then typing `:w myscript.vim` followed
-      by `Enter`.
+     After doing this, save the buffer as a script file by exiting
+     insert mode with `Esc` and then typing `:w myscript.vim` followed
+     by `Enter`.
 
   2. Source the script file to load the function with the following:
         :source myscript.vim
@@ -453,12 +455,11 @@ endfunction
   3. Now, let's call our function. In normal mode, type:
      :call Lumos()
 
-    You should see "Lumos Maxima! The tip of your wand lights up."
+     You should see "Lumos Maxima! The tip of your wand lights up."
 
-
-  3. Let's create a more complex function that uses a parameter:
-      Open `myscript.vim` if it's not already open (`:e myscript.vim`)
-      Insert the following function:
+  4. Let's create a more complex function that uses a parameter:
+     Open `myscript.vim` if it's not already open (`:e myscript.vim`)
+     Insert the following function:
 
 function! CastSpell(spell)
   if a:spell == "Lumos"
@@ -470,73 +471,71 @@ function! CastSpell(spell)
   endif
 endfunction
 
+  5. Once again, write and source the script file by using `:w` to
+     write the changes and `:source myscript.vim` to load the functions.
 
-    4. Once again, write and source the script file by using `:w` to
-       write the changes and `:source myscript.vim` to load the functions.
+  6. Now let's call our function with different spells:
+     :call CastSpell("Lumos")
+     :call CastSpell("Nox")
+     :call CastSpell("Expelliarmus")
 
-    5. Now let's call our function with different spells:
-       :call CastSpell("Lumos")
-       :call CastSpell("Nox")
-       :call CastSpell("Expelliarmus")
-
-    6. We can also create custom commands. Insert the following in
-       `myscript.vim`:
+  7. We can also create custom commands. Insert the following in
+     `myscript.vim`:
 
 command! Lumos call CastSpell("Lumos")
 command! Nox call CastSpell("Nox")
 
+     Then write and source the updated commands.
 
-    Then write and source the updated commands.
+     Now you can use `:Lumos` and `:Nox` as commands!
 
-    Now you can use `:Lumos` and `:Nox` as commands!
+  8. Let's create a mapping. Type the following in `myscript.vim`:
 
-    6. Let's create a mapping. Type the following in `myscript.vim`:
+nnoremap <leader>l :call CastSpell("Lumos")<CR>
 
-  nnoremap <leader>l :call CastSpell("Lumos")<CR>
+     Now, pressing <leader>l in normal mode will cast Lumos!
 
-    Now, pressing <leader>l in normal mode will cast Lumos!
+  CHALLENGE: Create a function called "SortingHat" that takes a
+             name as a parameter and randomly assigns it to one
+             of the four Hogwarts houses. Then create a command
+             called :SortMe that calls this function with your
+             name.
 
-    CHALLENGE: Create a function called "SortingHat" that takes a
-               name as a parameter and randomly assigns it to one
-               of the four Hogwarts houses. Then create a command
-               called :SortMe that calls this function with your
-               name.
-
-    Hint: You can use the random() function in Vim to generate a random
-          number.
-
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                         Lesson 13 SUMMARY
-
-    1. `let` assigns a value to a variable.
-
-    2. `echo` prints a message.
-
-    3. `function!` and `endfunction` define a function.
-
-    4. `call` invokes a function.
-
-    5. Custom commands can be created using `command!`.
-
-    6. Mappings can be created with `nnoremap`.
+  Hint: You can use the random() function in Vim to generate a random
+        number.
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        Lesson 14: VIM PLUGINS
+                        Lesson 13 SUMMARY
+
+  1. `let` assigns a value to a variable.
+
+  2. `echo` prints a message.
+
+  3. `function!` and `endfunction` define a function.
+
+  4. `call` invokes a function.
+
+  5. Custom commands can be created using `command!`.
+
+  6. Mappings can be created with `nnoremap`.
 
 
-    Plugins extend Vim's functionality. Let's explore how to use them.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                        Lesson 14: VIM PLUGINS
 
-    NOTE: For this lesson, we'll assume you're using vim-plug as your plugin
-    manager. If you haven't installed it yet, you can do so by following the
-    instructions at https://github.com/junegunn/vim-plug
 
-    ** Basic vim-plug commands: **
-        :PlugInstall    " Install plugins
-        :PlugUpdate     " Update plugins
-        :PlugClean      " Remove unused plugins
-        :PlugStatus     " Check the status of plugins
+     Plugins extend Vim's functionality. Let's explore how to use them.
+
+     NOTE: For this lesson, we'll assume you're using vim-plug as your plugin
+     manager. If you haven't installed it yet, you can do so by following the
+     instructions at https://github.com/junegunn/vim-plug
+
+     ** Basic vim-plug commands: **
+         :PlugInstall    " Install plugins
+         :PlugUpdate     " Update plugins
+         :PlugClean      " Remove unused plugins
+         :PlugStatus     " Check the status of plugins
 
   1. To add a plugin, you need to modify your .vimrc file. Let's add the
      'NERDTree' plugin, which provides a file system explorer. Add this
@@ -569,29 +568,29 @@ call plug#end()
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                         Lesson 14 SUMMARY
+                        Lesson 14 SUMMARY
 
-    1. `:PlugInstall` installs plugins with `vim-plug`
+  1. `:PlugInstall` installs plugins with `vim-plug`
 
-    2. `:PlugUpdate` updates plugins.
+  2. `:PlugUpdate` updates plugins.
 
-    3. `:PlugClean` removes unused plugins.
+  3. `:PlugClean` removes unused plugins.
 
-    4. `:PlugStatus` checks the status of plugins.
+  4. `:PlugStatus` checks the status of plugins.
 
-    5. Plugins can be added to your `.vimrc` using `Plug 'plugin/repository'`.
+  5. Plugins can be added to your `.vimrc` using `Plug 'plugin/repository'`.
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        Lesson 15.1: VIM SESSIONS
+                        Lesson 15.1: VIM SESSIONS
 
-    Vim sessions allow you to save your current work environment and restore
-    it later.
+     Vim sessions allow you to save your current work environment and restore
+     it later.
 
-    ** Session commands: **
-        :mksession filename.vim   " Create a session file
-        :source filename.vim      " Load a session
-        :mksession! filename.vim  " Update an existing session
+     ** Session commands: **
+         :mksession filename.vim   " Create a session file
+         :source filename.vim      " Load a session
+         :mksession! filename.vim  " Update an existing session
 
   1. Open a few files in split windows and create some modifications.
 
@@ -611,20 +610,20 @@ call plug#end()
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        Lesson 15.2: VIM REGISTERS
+                        Lesson 15.2: VIM REGISTERS
 
-    Vim registers are like multiple clipboards that can store text and
-    commands.
+     Vim registers are like multiple clipboards that can store text and
+     commands.
 
-    ** Register commands: **
-        "ay    " Yank into register a
-        "ap    " Paste from register a
-        :reg   " View the contents of all registers
+     ** Register commands: **
+         "ay    " Yank into register a
+         "ap    " Paste from register a
+         :reg   " View the contents of all registers
 
   1. Yank the first line into register w by placing your cursor on it and
-      typing "wy$:
+     typing "wy$:
 
-      Wingardium Leviosa
+     Wingardium Leviosa
 
   2. Now move your cursor to the right of the arrow below and paste from
      register w by typing "wp
@@ -632,6 +631,7 @@ call plug#end()
 --->
 
   3. Copy the following line into register x:
+
      Expelliarmus
 
   4. View the contents of your registers by typing :reg
@@ -655,15 +655,15 @@ call plug#end()
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                         Lesson 15 SUMMARY
+                        Lesson 15 SUMMARY
 
   1. Vim sessions allow you to save and restore your working environment.
 
   2. Use :mksession to create a session and :source to restore it.
 
-  4. Use " followed by a letter to specify a register for yanking or pasting.
+  3. Use " followed by a letter to specify a register for yanking or pasting.
 
-  5. The :reg command shows the contents of all registers.
+  4. The :reg command shows the contents of all registers.
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
