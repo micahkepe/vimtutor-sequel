@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+Special thanks to the following contributors for their help with this release:
+
+- [@gyhtomit](https://github.com/gyhtomit)
+
+### Fixed
+
+- Numberings corrected and moved to column 3 for consistency.
+- End each lesson with 2 blank lines.
+- Lesson headings maintain same indentation.
+- Make case consistently uppercase for lesson headers.
+
 ## [1.2.3] - 2024-08-03
 
 Special thanks to the following contributors for their help with this release:
