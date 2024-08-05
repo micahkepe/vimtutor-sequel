@@ -31,7 +31,7 @@
 
      Lesson 9: SPELLCHECK
 
-     LESSON 10: INDENTING, COMMENTING, AND CHANGING CASE
+     Lesson 10: INDENTING, COMMENTING, AND CHANGING CASE
        > 10.1: Indenting
        > 10.2: Commenting
        > 10.3: Changing Case
@@ -46,7 +46,7 @@
 
      Lesson 15: VIM SESSIONS AND REGISTERS
        > 15.1: Vim Sessions
-       > 15.2: Vim REGISTERS
+       > 15.2: Vim Registers
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
