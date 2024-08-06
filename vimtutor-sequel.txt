@@ -1,5 +1,5 @@
 ==============================================================================
-=  W e l c o m e  t o  t h e  V I M  T u t o r  S e q u e l  -  Version 1.2  =
+=  W e l c o m e  t o  t h e  V I M  T u t o r  S e q u e l  -  Version 1.3  =
 ==============================================================================
 
      Vimtutor Sequel is designed to continue your Vim education from
@@ -235,6 +235,9 @@ You do not talk about Fight Club."
 
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                         Lesson 10.2 COMMENTING
+     
+     NOTE: Different programming languages use different comment symbols.
+           For demonstration, the examples below use the `#` symbol.
 
      ** For commenting/uncommenting a single line, use the following
         commands: **
@@ -338,6 +341,9 @@ print("Hello world!")
          g#  - Search backward for the partial word under the cursor
 
      ** For search and replace, use: **
+         :s/old/new/g      - Replace occurences of 'old' with 'new' in the 
+                             current line
+         :s/old/new/gc     - Replace with confirmation in the current line
          :%s/old/new/g     - Replace all occurrences of 'old' with 'new'
          :%s/old/new/gc    - Replace all occurrences with confirmation
 
@@ -349,13 +355,15 @@ print("Hello world!")
 
   3. Place your cursor on "ed" and use g* to search for partial matches.
 
-  4. Replace "old" with "new" in the following text with :%s/old/new/g
+  4. Replace "old" with "new" in the following text by selecting the line 
+     in visual mode and typing :s/old/new/g 
 
      The old dog learned old tricks from an old book.
 
-  5. Now try with confirmation using :%s/vim/emacs/gc
+  5. Now try with confirmation using :s/vim/emacs/gc. You can press y to 
+     confirm, n to skip, a to replace all, and q to quit subsitutions.
 
-     I love vim because vim is powerful. Vim users enjoy vim.
+     I love vim because vim is powerful. Vim users enjoy vim. Vim is great.
 
   CHALLENGE: Use advanced search and replace to change all instances of
              "lion" to "penguin" and "Africa" to "Antarctica" in the
@@ -378,7 +386,7 @@ print("Hello world!")
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-			Lesson 12: MACROS
+                        Lesson 12: MACROS
 
      Macros allow you to record a sequence of commands and play them back.
 
@@ -489,7 +497,16 @@ command! Nox call CastSpell("Nox")
 
      Now you can use `:Lumos` and `:Nox` as commands!
 
-  8. Let's create a mapping. Type the following in `myscript.vim`:
+  8. Let's create a mapping. Let's map the Lumos spell to the leader key.
+     
+     NOTE: The `<leader>` key is a special key used in Vim to create custom
+     shortcuts. By deafault, it is often set to the `\` key. However, you can
+     customize it in your `.vimrc`. For example, you can set it to `,` with:
+
+         let mapleader = ","
+
+
+     Type the following in `myscript.vim`:
 
 nnoremap <leader>l :call CastSpell("Lumos")<CR>
 
@@ -519,6 +536,9 @@ nnoremap <leader>l :call CastSpell("Lumos")<CR>
   5. Custom commands can be created using `command!`.
 
   6. Mappings can be created with `nnoremap`.
+
+  7. The `<leader>` key is a special key that can be used to create custom
+     shortcuts and can be customized with `let mapleader = "your_key"`.
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -563,8 +583,13 @@ call plug#end()
   6. You should now see a more informative status bar at the bottom of
      your Vim window.
 
-  CHALLENGE: Research and add a Vim plugin that adds Git integration to
+  CHALLENGE #1: Research and add a Vim plugin that adds Git integration to
              Vim. Install it and try out its basic functionality.
+   
+  CHALLENGE #2: Add the 'preservim/nerdcommenter' plugin to add robust 
+              commenting functionality to Vim that overcome the 
+              language-specific limitations of Vim's built-in "commenting". 
+              Install it and try it out on a code file.
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -679,6 +704,7 @@ call plug#end()
 
   - Vim's built-in help system: :help
   - Vim's official documentation: vimdoc.sourceforge.net
+  - Vim's user manual: Accessible with :help user-manual
 
   Websites:
   - Vimtricks.com

@@ -11,9 +11,16 @@ Special thanks to the following contributors for their help with this release:
 
 - [@gyhtomit](https://github.com/gyhtomit)
 
+### Added
+
+- Notes about "commenting" in Vim in Lesson 10.2 and the leader key in Lesson 13.
+- Reference to the Vim user manual in conclusion.
+- Additional challenge to install the 'preservim/nerdcommenter' plugin in Lesson 13.
+
 ### Changed
 
 - Ensured minimal configuration by adding `-U NONE` to avoid loading user-specific gvimrc files.
+- Changed search and replace commands in Lesson 11 excersiss to use `:s` instead of `:%s`.
 
 ### Fixed
 
