@@ -28,7 +28,8 @@ rm -f "$TEMP_FILE"
 cp "$TUTORIAL_FILE" "$TEMP_FILE"
 
 # Open the temporary tutorial file in Vim with the custom vimrc
-vim -u "$VIMRC_FILE" "$TEMP_FILE"
+# Add -U NONE to not interfere with user-specific Vim settings  
+vim -u "$VIMRC_FILE" -U NONE "$TEMP_FILE"
 
 # Clean up the temporary file after Vim exits
 rm -f "$TEMP_FILE"

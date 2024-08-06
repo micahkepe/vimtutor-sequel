@@ -11,6 +11,10 @@ Special thanks to the following contributors for their help with this release:
 
 - [@gyhtomit](https://github.com/gyhtomit)
 
+### Changed
+
+- Ensured minimal configuration by adding `-U NONE` to avoid loading user-specific gvimrc files.
+
 ### Fixed
 
 - Numberings corrected and moved to column 3 for consistency.
