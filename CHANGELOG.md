@@ -7,20 +7,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3] - 2024-08-07
+
 Special thanks to the following contributors for their help with this release:
 
 - [@gyhtomit](https://github.com/gyhtomit)
 
 ### Added
 
+- Lesson 16 on change navigation and the undo tree.
 - Notes about "commenting" in Vim in Lesson 10.2 and the leader key in Lesson 13.
 - Reference to the Vim user manual in conclusion.
 - Additional challenge to install the 'preservim/nerdcommenter' plugin in Lesson 13.
+- Note about registers in Lesson 12.
 
 ### Changed
 
 - Ensured minimal configuration by adding `-U NONE` to avoid loading user-specific gvimrc files.
-- Changed search and replace commands in Lesson 11 excersiss to use `:s` instead of `:%s`.
+- Changed search and replace commands in Lesson 11 exercises to use `:s` instead of `:%s`.
 
 ### Fixed
 

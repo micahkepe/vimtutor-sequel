@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION="1.2.3"  # TODO: Update this with each new release
+VERSION="1.3"  # TODO: Update this with each new release
 
 # Define the location of the vimtutor-sequel.txt file and vimrc
 # Where brew installs the files using `pkgshare` command

@@ -48,6 +48,8 @@
        > 15.1: Vim Sessions
        > 15.2: Vim Registers
 
+     Lesson 16: CHANGE NAVIGATION
+
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                         Lesson 8.1: CREATING SPLITS
@@ -396,6 +398,11 @@ print("Hello world!")
           @a  - Play back the macro stored in register 'a'
           @@  - Repeat the last played macro
 
+      NOTE: We will discuss registers more in depth in Lesson 15.2. For
+      now, just know that registers are like named clipboards that can 
+      store text or, in this case, a series of commands. You can use any 
+      letter from a to z as a register name for your macros.
+
   1. Place your cursor at the start of the first line below.
      Type qa to start recording, then perform these actions:
 
@@ -689,6 +696,73 @@ call plug#end()
   3. Use " followed by a letter to specify a register for yanking or pasting.
 
   4. The :reg command shows the contents of all registers.
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                        Lesson 16: CHANGE NAVIGATION
+
+   This lesson covers commands that help you navigate through changes
+   and edits in your document efficiently.
+
+   ** Useful change navigation commands: **
+       `.       - Jump to position where the last change was made
+       g;       - Go to position of last change
+       g,       - Go to position of next change
+       gi       - Go to the last place where you exited Insert mode
+       :earlier - Go to the state of the document at an earlier time
+       :later   - Go to the state of the document at a later time
+
+  1. Make a change somewhere in this file, then move your cursor away.
+     Use `. to jump back to where you made the change.
+
+  2. Make several changes in different parts of this file. Then use g; 
+     to move backwards through your change list, and g, to move forwards.
+
+  3. Navigate to the first arrow below and press `A` to append and type some 
+     text. Press `Esc` and navigate to the second arrow. Now use `gi` to 
+     return to where you last exited insert mode. Note how it resumes insert
+     mode.
+
+--->
+
+
+--->
+
+  4. Vim maintains a detailed history of changes, known as the undo tree. 
+     This tree structure allows you to navigate to different states of your 
+     document, even if those changes were made a while ago. 
+
+     ** Undo tree navigation examples: **
+         :earlier 5m   - Go back 5 minutes in the document's history.
+         :later 5m     - Move forward 5 minutes in the document's history.
+         :earlier 5f   - Go back 5 changes in the file's history.
+         :later 5f     - Move forward 5 changes in the file's history.
+
+     For more details, see `:help undo-tree`.
+
+  5. Replace the underscores with your name on the following line. Now, 
+     use `:earlier 1f` to go back 1 change in your editing history. 
+     Observe the change being reverted. Then, use `:later 1f` to move 
+     forward 1 change.
+
+---> My name is _____
+
+  CHALLENGE: Experiment with the `:earlier` and `:later` commands using 
+             different time and change parameters. Notice how Vim allows you 
+             to navigate through your document's state history efficiently.
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                        Lesson 16 SUMMARY
+
+  1. `. jumps to the position where the last change was made.
+
+  2. g; and g, navigate through the change list.
+
+  3. gi returns to the last exited insert mode position.
+
+  4. :earlier and :later allow you to navigate through the document's
+     state history.
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
