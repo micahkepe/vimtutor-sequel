@@ -64,9 +64,9 @@
        :vs - split vertically and open the same file in split screen
 
      ** To open a new file in a split, use: **
-       :sp [filename]  - split horizontally and open [filename]
+       :sp [filename] - split horizontally and open [filename]
 
-       :vsp [filename] - split vertically and open [filename]
+       :vs [filename] - split vertically and open [filename]
 
   1. Press :sp to create a horizontal split of this file.
 
@@ -74,7 +74,7 @@
 
   3. Type :q to close the split and return to the original window.
 
-  4. Now use :vsp to create a vertical split.
+  4. Now use :vs to create a vertical split.
 
   5. Press CTRL-W l to move to the new split on the right.
 
@@ -96,7 +96,7 @@
      Once you've created splits, you might want to resize them to better
      fit your needs.
 
-     ** To resize splits, use the following commands: **
+     ** To resize splits, use the CTRL-W window command.**
           CTRL-W +  - increase height of current split
           CTRL-W -  - decrease height of current split
           CTRL-W >  - increase width of current split
@@ -109,25 +109,27 @@
 
   3. Now press CTRL-W - to decrease its height.
 
-  4. Create a vertical split with :vsp
+  4. Create a vertical split with :vs
 
   5. Use CTRL-W > to increase its width, and CTRL-W < to decrease it.
 
-  6. Finally, press CTRL-W = to equalize all splits.
+  6. Use CTRL-W 4 > to increase its width 4 times.
+
+  7. Finally, press CTRL-W = to equalize all splits.
 
   CHALLENGE: Create a layout with three splits:
               - One large split on the left
               - Two smaller splits stacked on the right
-              * Hint: you'll need to use :vsp once and :sp once,
+              * Hint: you'll need to use :vs once and :sp once,
                       then resize the splits accordingly.
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                         Lesson 8 SUMMARY
 
-  1. :sp and :vsp split the screen horizontally and vertically.
+  1. :sp and :vs split the screen horizontally and vertically.
 
-  2. CTRL-W h/j/k/l navigate between splits.
+  2. CTRL-W h/j/k/l navigates between splits.
 
   3. :q closes the current split.
 
@@ -199,10 +201,11 @@
 
      ** To indent, comment, or change the case of multiple lines, use the
         following commands. **
-         > - Indent the selected lines to the right
-         < - Indent the selected lines to the left
-         #> - Indent the selected lines by a certain number of levels
-         = - Auto-indent the selected lines (tries to guess the correct indent)
+         >        - Indent the selected lines to the right
+         <        - Indent the selected lines to the left
+         [count]> - Indent the selected lines by a certain number of levels
+         =        - Auto-indent the selected lines (tries to guess the correct
+                    indent)
 
      To indent multiple lines at once, follow these steps:
 
@@ -212,9 +215,9 @@
 
   3. Press > to indent the selected lines.
 
-“Never let the future disturb you. You will meet it,
+"Never let the future disturb you. You will meet it,
 if you have to, with the same weapons of reason which
-today arm you against the present.”
+today arm you against the present."
 
   4. To indent by a certain number of levels, use #> where # is the number.
      Try indenting the following paragraph by three levels:
@@ -237,7 +240,7 @@ You do not talk about Fight Club."
 
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                         Lesson 10.2 COMMENTING
-     
+
      NOTE: Different programming languages use different comment symbols.
            For demonstration, the examples below use the `#` symbol.
 
@@ -343,7 +346,7 @@ print("Hello world!")
          g#  - Search backward for the partial word under the cursor
 
      ** For search and replace, use: **
-         :s/old/new/g      - Replace occurences of 'old' with 'new' in the 
+         :s/old/new/g      - Replace occurences of 'old' with 'new' in the
                              current line
          :s/old/new/gc     - Replace with confirmation in the current line
          :%s/old/new/g     - Replace all occurrences of 'old' with 'new'
@@ -357,12 +360,12 @@ print("Hello world!")
 
   3. Place your cursor on "ed" and use g* to search for partial matches.
 
-  4. Replace "old" with "new" in the following text by selecting the line 
-     in visual mode and typing :s/old/new/g 
+  4. Replace "old" with "new" in the following text by selecting the line
+     in visual mode and typing :s/old/new/g
 
      The old dog learned old tricks from an old book.
 
-  5. Now try with confirmation using :s/vim/emacs/gc. You can press y to 
+  5. Now try with confirmation using :s/vim/emacs/gc. You can press y to
      confirm, n to skip, a to replace all, and q to quit subsitutions.
 
      I love vim because vim is powerful. Vim users enjoy vim. Vim is great.
@@ -399,8 +402,8 @@ print("Hello world!")
           @@  - Repeat the last played macro
 
       NOTE: We will discuss registers more in depth in Lesson 15.2. For
-      now, just know that registers are like named clipboards that can 
-      store text or, in this case, a series of commands. You can use any 
+      now, just know that registers are like named clipboards that can
+      store text or, in this case, a series of commands. You can use any
       letter from a to z as a register name for your macros.
 
   1. Place your cursor at the start of the first line below.
@@ -505,7 +508,7 @@ command! Nox call CastSpell("Nox")
      Now you can use `:Lumos` and `:Nox` as commands!
 
   8. Let's create a mapping. Let's map the Lumos spell to the leader key.
-     
+
      NOTE: The `<leader>` key is a special key used in Vim to create custom
      shortcuts. By deafault, it is often set to the `\` key. However, you can
      customize it in your `.vimrc`. For example, you can set it to `,` with:
@@ -592,10 +595,10 @@ call plug#end()
 
   CHALLENGE #1: Research and add a Vim plugin that adds Git integration to
              Vim. Install it and try out its basic functionality.
-   
-  CHALLENGE #2: Add the 'preservim/nerdcommenter' plugin to add robust 
-              commenting functionality to Vim that overcome the 
-              language-specific limitations of Vim's built-in "commenting". 
+
+  CHALLENGE #2: Add the 'preservim/nerdcommenter' plugin to add robust
+              commenting functionality to Vim that overcome the
+              language-specific limitations of Vim's built-in "commenting".
               Install it and try it out on a code file.
 
 
@@ -715,11 +718,11 @@ call plug#end()
   1. Make a change somewhere in this file, then move your cursor away.
      Use `. to jump back to where you made the change.
 
-  2. Make several changes in different parts of this file. Then use g; 
+  2. Make several changes in different parts of this file. Then use g;
      to move backwards through your change list, and g, to move forwards.
 
-  3. Navigate to the first arrow below and press `A` to append and type some 
-     text. Press `Esc` and navigate to the second arrow. Now use `gi` to 
+  3. Navigate to the first arrow below and press `A` to append and type some
+     text. Press `Esc` and navigate to the second arrow. Now use `gi` to
      return to where you last exited insert mode. Note how it resumes insert
      mode.
 
@@ -728,9 +731,9 @@ call plug#end()
 
 --->
 
-  4. Vim maintains a detailed history of changes, known as the undo tree. 
-     This tree structure allows you to navigate to different states of your 
-     document, even if those changes were made a while ago. 
+  4. Vim maintains a detailed history of changes, known as the undo tree.
+     This tree structure allows you to navigate to different states of your
+     document, even if those changes were made a while ago.
 
      ** Undo tree navigation examples: **
          :earlier 5m   - Go back 5 minutes in the document's history.
@@ -740,15 +743,15 @@ call plug#end()
 
      For more details, see `:help undo-tree`.
 
-  5. Replace the underscores with your name on the following line. Now, 
-     use `:earlier 1f` to go back 1 change in your editing history. 
-     Observe the change being reverted. Then, use `:later 1f` to move 
+  5. Replace the underscores with your name on the following line. Now,
+     use `:earlier 1f` to go back 1 change in your editing history.
+     Observe the change being reverted. Then, use `:later 1f` to move
      forward 1 change.
 
 ---> My name is _____
 
-  CHALLENGE: Experiment with the `:earlier` and `:later` commands using 
-             different time and change parameters. Notice how Vim allows you 
+  CHALLENGE: Experiment with the `:earlier` and `:later` commands using
+             different time and change parameters. Notice how Vim allows you
              to navigate through your document's state history efficiently.
 
 
