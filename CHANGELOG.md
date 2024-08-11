@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+Special thanks to the following contributors for their help with this release:
+
+- [@fairclothjm](https://github.com/fairclothjm)
+
+### Changed
+
+- Change vertical split command in Lesson 15 from `:vsp` to `:vs` for brevity.
+
+### Fixed
+
+- Remove trailing whitespaces and minor typos in the tutorial text.
+- Correct quotation marks in Lesson 10.1 for consistency.
+
 ## [1.3] - 2024-08-07
 
 Special thanks to the following contributors for their help with this release:
