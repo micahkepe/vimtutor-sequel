@@ -24,16 +24,9 @@ If you don't have Homebrew installed, you can install it using the following com
 
 To install `vimtutor-sequel` for the first time using Homebrew:
 
-1. **Tap the repository**:
-
-   ```sh
-   brew tap micahkepe/vimtutor-sequel
-   ```
-
-2. **Install `vimtutor-sequel`**:
-   ```sh
-   brew install vimtutor-sequel
-   ```
+```sh
+brew install vimtutor-sequel
+```
 
 ### For Existing Users
 

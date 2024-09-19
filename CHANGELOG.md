@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Update README.md Hoembrew instructions now that `vimtutor-sequel` is available on Homebrew.
+
 ## [1.3.1] - 2024-08-15
 
 Special thanks to the following contributors for their help with this release:
