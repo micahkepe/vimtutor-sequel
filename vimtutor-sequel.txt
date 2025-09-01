@@ -675,7 +675,7 @@ call plug#end()
   5. You can even use registers with macros. Record the following macro
      into register m:
 
-     qmcwHogwarts<Esc>jq
+     qmcwHogwarts<Esc>j^q
 
   6. Now apply this macro to the following lines using @m:
 
