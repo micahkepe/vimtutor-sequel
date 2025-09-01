@@ -411,13 +411,14 @@ print("Hello world!")
 
          - Change "TODO" to "DONE" using cw
          - Move to the next line using j
+         - Move to the start of the line using ^
          - Type q to stop recording.
 
      TODO: First task
      TODO: Second task
      TODO: Third task
 
-  2. Move back to the second line and type @a to play the macro.
+  2. On the second line, type @a to play the macro.
 
   3. Type @@ to repeat the macro for the third line.
 
@@ -674,7 +675,7 @@ call plug#end()
   5. You can even use registers with macros. Record the following macro
      into register m:
 
-     qmcwHogwarts<Esc>jq
+     qmcwHogwarts<Esc>j^q
 
   6. Now apply this macro to the following lines using @m:
 
