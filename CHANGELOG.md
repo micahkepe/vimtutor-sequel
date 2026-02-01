@@ -3,13 +3,30 @@
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+and this project adheres to [Semantic
+Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [1.3.2] - 2025-02-01
+
+Special thanks to the following contributors for their help with this release:
+
+- [@rmbruntz](https://github.com/rmbruntz)
+
+### Added
+
+- GitHub Action to auto-bump Homebrew formula on new releases.
+
 ### Changed
 
-- Update README.md Hoembrew instructions now that `vimtutor-sequel` is available on Homebrew.
+- Update README.md Homebrew instructions now that `vimtutor-sequel` is available
+  on Homebrew.
+
+### Fixed
+
+- Fix macro instructions in Lesson 12 (Registers).
+- Fix instructions in macros lesson.
 
 ## [1.3.1] - 2024-08-15
 
@@ -35,15 +52,18 @@ Special thanks to the following contributors for their help with this release:
 ### Added
 
 - Lesson 16 on change navigation and the undo tree.
-- Notes about "commenting" in Vim in Lesson 10.2 and the leader key in Lesson 13.
+- Notes about "commenting" in Vim in Lesson 10.2 and the leader key in Lesson 13
 - Reference to the Vim user manual in conclusion.
-- Additional challenge to install the 'preservim/nerdcommenter' plugin in Lesson 13.
+- Additional challenge to install the 'preservim/nerdcommenter' plugin in Lesson
+  13
 - Note about registers in Lesson 12.
 
 ### Changed
 
-- Ensured minimal configuration by adding `-U NONE` to avoid loading user-specific gvimrc files.
-- Changed search and replace commands in Lesson 11 exercises to use `:s` instead of `:%s`.
+- Ensured minimal configuration by adding `-U NONE` to avoid loading
+  user-specific gvimrc files.
+- Changed search and replace commands in Lesson 11 exercises to use `:s` instead
+  of `:%s`.
 
 ### Fixed
 
@@ -61,7 +81,8 @@ Special thanks to the following contributors for their help with this release:
 ### Added
 
 - Change log to track project updates.
-- Add version flags to the script for easier version tracking. (`-v`, `--version`)
+- Add version flags to the script for easier version tracking. (`-v`,
+  `--version`)
 
 ### Changed
 
@@ -118,7 +139,8 @@ Special thanks to the following contributors for their help with this release:
 - Initial release of Vimtutor Sequel.
 - Basic advanced Vim topics and initial lessons.
 
-[Unreleased]: https://github.com/micahkepe/vimtutor-sequel/compare/v1.3.1...HEAD
+[Unreleased]: https://github.com/micahkepe/vimtutor-sequel/compare/v1.3.2...HEAD
+[1.3.2]: https://github.com/micahkepe/vimtutor-sequel/compare/v1.3.1...v1.3.2
 [1.3.1]: https://github.com/micahkepe/vimtutor-sequel/compare/v1.3...v1.3.1
 [1.3]: https://github.com/micahkepe/vimtutor-sequel/compare/v1.2.3...v1.3
 [1.2.3]: https://github.com/micahkepe/vimtutor-sequel/compare/v1.2.2...v1.2.3

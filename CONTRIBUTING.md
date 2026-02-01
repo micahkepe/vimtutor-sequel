@@ -1,10 +1,13 @@
-# Contributing to vimtutor-sequel
+# Contributing to `vimtutor-sequel`
 
-Thank you for considering contributing to `vimtutor-sequel`! We welcome contributions from everyone.
+Thank you for considering contributing to `vimtutor-sequel`! We welcome
+contributions from everyone.
 
 ## How to Contribute
 
-1. **Fork the Repository**: Click the "Fork" button at the top of this repository to create your own fork.
+1. **Fork the Repository**: Click the "Fork" button at the top of this
+   repository to create your own fork.
+
 2. **Clone the Repository**: Clone your fork to your local machine using:
    ```sh
    git clone https://github.com/your-username/vimtutor-sequel.git
@@ -29,4 +32,5 @@ Thank you for considering contributing to `vimtutor-sequel`! We welcome contribu
    git push origin your-branch-name
    ```
 
-7. **Submit a Pull Request**: Submit a pull request from your branch to the `main` branch of this repository.
+7. **Submit a Pull Request**: Submit a pull request from your branch to the
+   `main` branch of this repository.
