@@ -346,7 +346,7 @@ print("Hello world!")
          g#  - Search backward for the partial word under the cursor
 
      ** For search and replace, use: **
-         :s/old/new/g      - Replace occurences of 'old' with 'new' in the
+         :s/old/new/g      - Replace occurrences of 'old' with 'new' in the
                              current line
          :s/old/new/gc     - Replace with confirmation in the current line
          :%s/old/new/g     - Replace all occurrences of 'old' with 'new'
@@ -366,7 +366,7 @@ print("Hello world!")
      The old dog learned old tricks from an old book.
 
   5. Now try with confirmation using :s/vim/emacs/gc. You can press y to
-     confirm, n to skip, a to replace all, and q to quit subsitutions.
+     confirm, n to skip, a to replace all, and q to quit substitutions.
 
      I love vim because vim is powerful. Vim users enjoy vim. Vim is great.
 
@@ -511,7 +511,7 @@ command! Nox call CastSpell("Nox")
   8. Let's create a mapping. Let's map the Lumos spell to the leader key.
 
      NOTE: The `<leader>` key is a special key used in Vim to create custom
-     shortcuts. By deafault, it is often set to the `\` key. However, you can
+     shortcuts. By default, it is often set to the `\` key. However, you can
      customize it in your `.vimrc`. For example, you can set it to `,` with:
 
          let mapleader = ","
